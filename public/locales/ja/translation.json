@@ -1,57 +1,36 @@
 ﻿{
-  "navbar": {
-    "home": "ホーム",
-    "about": "私たちについて",
-    "program": "プログラム",
-    "calendar": "カレンダー",
-    "shop": "ショップ",
-    "blog": "ブログ",
-    "contact": "お問い合わせ"
-  },
+  "navbar": { "home": "Home", "about": "About Us", "program": "Program", "calendar": "Calendar", "shop": "Shop", "blog": "Blog", "contact": "Contact" },
   "home": {
-    "hero_subtitle": "ラテンアメリカ・バイオヘルス運動",
-    "hero_title": "生命力を取り戻す",
-    "hero_highlight": "自然に",
-    "floating_title": "自己管理による健康",
-    "floating_desc": "あなたの体は賢く、必要なものを教えてくれます。私たちは自然医学、尿療法、生体エネルギー運動を通じて活力を促進します。依存することなく、あなた自身の内なる治癒力を目覚めさせます。",
-    "btn_program": "プログラムを見る",
-    "atom_role": "創設者",
-    "alicia_role": "共同創設者",
-    "pillars_title": "私たちの柱",
-    "pillar_1_title": "尿療法 (Urosalud)",
-    "pillar_1_desc": "尿療法は免疫システムを揺り動かし、強化します。あなた自身の治癒のための抗体の宝庫です。",
-    "pillar_2_title": "生命エネルギー (活力)",
-    "pillar_2_desc": "ミトコンドリアを再活性化し、体温と生きる意欲を高めるための生体エネルギー運動とウォーキング。",
-    "pillar_3_title": "自己管理",
-    "pillar_3_desc": "依存を断ち切りましょう。症状だけを治療する商業医療から離れ、自分の健康を自分で管理する方法を学びましょう。",
-    "quote": "健康な体に病気は存在しません。あなたの体は賢く、必要なものを教えてくれます。",
-    "quote_author": "アトム・イノウエ博士",
-    "cta_tag": "参加する",
-    "cta_title": "充実した人生への道を始めましょう",
-    "cta_desc": "対面ワークショップ、アノライマでの家族滞在、自己管理療法。私たちのコミュニティに参加して、あなたの力を取り戻しましょう。",
-    "btn_contact": "お問い合わせ",
-    "btn_shop": "ショップを見る"
+    "hero_subtitle": "LATIN AMERICAN BIOHEALTH MOVEMENT",
+    "hero_title": "Recover Your Vitality",
+    "hero_highlight": "Naturally",
+    "modal_hint": "Click photo to meet us",
+    "close_modal": "Close & Watch Video"
   },
   "about": {
-    "hero_tag": "私たちの歴史",
-    "hero_title": "自然病院から",
-    "hero_highlight": "充実した人生へ",
-    "bio_title": "アトム・イノウエ博士",
-    "bio_subtitle": "ラテンアメリカ・バイオヘルス運動の創設者",
-    "bio_p1": "1944年満州生まれ。東洋医学の巨匠アトム・イノウエは、統合的健康の探求に生涯を捧げてきました。東京の東洋医学学校を卒業。",
-    "bio_p2": "彼の道はニカラグアで「自然病院」を設立し、大きな節目を迎えました。1990年、ウリュウ博士と共にバイオヘルスの概念が誕生しました。",
-    "bio_p3": "現在はコロンビアのアノライマに居住し、妻のアリシア・カブレラ博士と共に有機農業を実践しています。",
-    "interview_tag": "独占インタビュー",
-    "interview_title": "バイオヘルスの本質",
-    "interview_desc": "人生と癒しについてのこの深い対話で、アトム博士の思想と哲学を直接知ることができます。"
+    "alicia_title": "Dr. Alicia Cabrera",
+    "alicia_subtitle": "Homeopathic Therapist & Co-Founder",
+    "alicia_desc": "From Bogota, Dr. Alicia is an expert in pain management via magnets, Reiki, and Acupuncture."
+  },
+  "program": {
+    "edu_title": "Education Plan",
+    "edu_desc": "Lectures on health philosophy and nutrition.",
+    "eco_title": "Ecotourism (Anolaima)",
+    "eco_desc": "Nature retreats and workshops in our farm.",
+    "home_title": "Home Visits (Bogota)",
+    "home_desc": "Diagnosis and therapies in your home.",
+    "cta_more": "More Info"
   },
   "contact": {
-    "title": "お問い合わせ",
-    "subtitle": "私たちがご案内します",
-    "phone": "電話 / WhatsApp",
-    "email": "メール",
-    "location": "場所",
-    "location_desc": "コロンビア、クンディナマルカ県、アノライマ、バイオヘルス農場",
-    "social": "フォローする"
-  }
+    "title": "Contact Us",
+    "form_name": "Full Name",
+    "form_email": "Email",
+    "form_msg": "Message",
+    "form_btn": "Send Message",
+    "success": "Message sent!",
+    "address": "Biosalud Farm, Anolaima",
+    "email_addr": "bioatom11@hotmail.com"
+  },
+  "calendar": { "title": "Events Calendar", "book_btn": "Book Now" },
+  "blog": { "title": "Biohealth Blog", "read_more": "Read More", "back": "Back" }
 }

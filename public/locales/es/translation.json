@@ -1,57 +1,43 @@
 ﻿{
-  "navbar": {
-    "home": "Inicio",
-    "about": "Quiénes Somos",
-    "program": "Programa",
-    "calendar": "Calendario",
-    "shop": "Tienda",
-    "blog": "Blog",
-    "contact": "Contacto"
-  },
+  "navbar": { "home": "Inicio", "about": "Quiénes Somos", "program": "Programa", "calendar": "Calendario", "shop": "Tienda", "blog": "Blog", "contact": "Contacto" },
   "home": {
     "hero_subtitle": "MOVIMIENTO LATINOAMERICANO DE BIOSALUD",
     "hero_title": "Recupera tu Vitalidad",
     "hero_highlight": "Naturalmente",
-    "floating_title": "Salud Autogestionada",
-    "floating_desc": "Tu cuerpo es sabio y te dice lo que necesitas. Promovemos la vitalidad a través de la medicina natural, la orinoterapia y el movimiento bioenergético. Sin dependencias, despertando tu propio sanador interno.",
-    "btn_program": "CONOCER EL PROGRAMA",
-    "atom_role": "Fundador",
-    "alicia_role": "Cofundadora",
-    "pillars_title": "NUESTROS PILARES",
-    "pillar_1_title": "Urosalud",
-    "pillar_1_desc": "La orinoterapia mueve, sacude y fortalece el sistema inmunológico. Un tesoro de anticuerpos propio para tu sanación.",
-    "pillar_2_title": "Energía Vital",
-    "pillar_2_desc": "Ejercicios bioenergéticos y caminatas para reactivar tus mitocondrias y elevar tu temperatura corporal y ánimo de vivir.",
-    "pillar_3_title": "Autogestión",
-    "pillar_3_desc": "Rompe la dependencia. Aprende a gestionar tu propia salud lejos de la medicina comercial que solo trata síntomas.",
-    "quote": "No existe enfermedad en cuerpo sano. Tu cuerpo es sabio y te dice lo que necesitas.",
-    "quote_author": "Dr. Atom Inoe",
-    "cta_tag": "PARTICIPA",
-    "cta_title": "Comienza tu camino hacia una vida plena",
-    "cta_desc": "Talleres presenciales, hospedaje familiar en Anolaima y terapias de autogestión. Únete a nuestra comunidad y recupera tu poder.",
-    "btn_contact": "CONTÁCTANOS",
-    "btn_shop": "VER TIENDA"
+    "modal_hint": "Haz clic en la foto para conocer nuestra historia",
+    "close_modal": "Cerrar y Ver Video"
   },
   "about": {
-    "hero_tag": "NUESTRA HISTORIA",
-    "hero_title": "Del Hospital Natural a la",
-    "hero_highlight": "Vida Plena",
-    "bio_title": "Dr. Atom Inoe",
-    "bio_subtitle": "Fundador del Movimiento Latinoamericano de Biosalud",
-    "bio_p1": "Nacido en Manchuria en 1944, el Maestro Oriental Atom Inoe ha dedicado su vida a la búsqueda de la salud integral. Graduado en la Escuela de Medicina Oriental de Tokio.",
-    "bio_p2": "Su camino marcó un hito en Nicaragua, fundando el 'Hospital Natural'. En 1990, junto al Dr. Uriu, nació el concepto de Biosalud.",
-    "bio_p3": "Actualmente reside en Anolaima, Colombia, practicando la agricultura orgánica junto a su esposa, la Dra. Alicia Cabrera.",
-    "interview_tag": "ENTREVISTA EXCLUSIVA",
-    "interview_title": "La Esencia de la Biosalud",
-    "interview_desc": "Conoce de primera mano el pensamiento y la filosofía del Dr. Atom en esta conversación profunda sobre la vida y la sanación."
+    "alicia_title": "Dra. Alicia Cabrera",
+    "alicia_subtitle": "Terapeuta Homeopática y Cofundadora",
+    "alicia_desc": "Originaria de Bogotá, la Dra. Alicia es una experta en el tratamiento del dolor y el equilibrio energético. Con amplios conocimientos en terapias con imanes (biomagnetismo), Reiki y Acupuntura, complementa la visión oriental del Dr. Atom con un toque terapéutico integral y profundo."
+  },
+  "program": {
+    "edu_title": "Plan de Educación Biosalud",
+    "edu_desc": "Ciclo de charlas y conferencias magistrales sobre la filosofía de la salud, nutrición consciente y autogestión.",
+    "eco_title": "Ecoturismo y Retiros (Anolaima)",
+    "eco_desc": "Sumérgete en la naturaleza en nuestra finca en Anolaima. Planes ecoturísticos en Cundinamarca, hospedaje familiar y talleres vivenciales.",
+    "home_title": "Visitas Domiciliarias (Bogotá)",
+    "home_desc": "Llevamos la biosalud a tu hogar. Diagnóstico y terapias personalizadas en la comodidad de tu casa en Bogotá.",
+    "cta_more": "Más Información"
   },
   "contact": {
-    "title": "Contacto",
-    "subtitle": "Estamos aquí para guiarte",
-    "phone": "Teléfono / WhatsApp",
-    "email": "Correo Electrónico",
-    "location": "Ubicación",
-    "location_desc": "Finca Biosalud, Anolaima, Cundinamarca, Colombia.",
-    "social": "Síguenos"
+    "title": "Contáctanos",
+    "form_name": "Nombre Completo",
+    "form_email": "Correo Electrónico",
+    "form_msg": "Mensaje",
+    "form_btn": "Enviar Mensaje",
+    "success": "¡Mensaje enviado con éxito!",
+    "address": "Finca Biosalud, Anolaima, Cundinamarca",
+    "email_addr": "bioatom11@hotmail.com"
+  },
+  "calendar": {
+    "title": "Calendario de Actividades",
+    "book_btn": "Reservar Cupo"
+  },
+  "blog": {
+    "title": "Blog Biosalud",
+    "read_more": "Leer Artículo",
+    "back": "Volver al Blog"
   }
 }
