@@ -1,11 +1,16 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css' // Importa Tailwind y tus variables
-import App from './App.tsx'
-import './i18n/config'; // <--- IMPORTANTE: Inicializa el sistema de idiomas
+﻿import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App'
+import './index.css'
+import './i18n/config';
+import netlifyIdentity from 'netlify-identity-widget';
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
+// ESTA ES LA CLAVE: Iniciar Identity antes de montar la App
+// Así captura el token antes de que el HashRouter lo borre
+netlifyIdentity.init();
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
     <App />
-  </StrictMode>,
+  </React.StrictMode>,
 )
