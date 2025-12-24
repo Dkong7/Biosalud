@@ -2,20 +2,21 @@
   name: git-gateway
   branch: main
 
-media_folder: "public/assets/images/uploads"
-public_folder: "/assets/images/uploads"
+# Dónde se guardan las imágenes subidas desde el panel
+media_folder: "public/assets/uploads"
+public_folder: "/assets/uploads"
 
-# Idioma del panel (opcional, por defecto inglés)
+# Idioma e interfaz
 locale: 'es'
-
-# URL del sitio para previsualizar
 site_url: https://biosaludmovement.netlify.app
+display_url: https://biosaludmovement.netlify.app
+logo_url: https://biosaludmovement.netlify.app/BIOHEALTH-LOGO-DARK.svg
 
-# Colecciones de contenido (Menús del panel)
+# --- EL MENÚ LATERAL (NAVBAR) ---
 collections:
-  # 1. BLOG
+  # 1. SECCIÓN DE BLOG
   - name: "blog"
-    label: "Blog"
+    label: "📝 Blog"
     folder: "src/content/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -23,16 +24,45 @@ collections:
       - {label: "Título", name: "title", widget: "string"}
       - {label: "Fecha", name: "date", widget: "datetime"}
       - {label: "Imagen Destacada", name: "thumbnail", widget: "image"}
-      - {label: "Cuerpo", name: "body", widget: "markdown"}
+      - {label: "Descripción Corta", name: "description", widget: "text"}
+      - {label: "Contenido", name: "body", widget: "markdown"}
 
-  # 2. TIENDA (Productos)
+  # 2. SECCIÓN DE TIENDA
   - name: "products"
-    label: "Tienda"
+    label: "🛍️ Tienda"
     folder: "src/content/products"
     create: true
     fields:
       - {label: "Nombre del Producto", name: "title", widget: "string"}
-      - {label: "Precio (COP)", name: "price", widget: "number"}
+      - {label: "Precio (COP)", name: "price", widget: "number", value_type: "int"}
       - {label: "Imagen", name: "image", widget: "image"}
-      - {label: "Descripción", name: "description", widget: "text"}
-      - {label: "Categoría", name: "category", widget: "select", options: ["Suplementos", "Equipos", "Libros"]}
+      - {label: "Categoría", name: "category", widget: "select", options: ["Suplementos", "Tecnología", "Libros", "Terapias"]}
+      - {label: "Descripción", name: "body", widget: "markdown"}
+
+  # 3. SECCIÓN DE PÁGINAS FIJAS (Home, Contacto, etc.)
+  - name: "pages"
+    label: "📄 Páginas Fijas"
+    files:
+      - name: "home"
+        label: "Inicio (Home)"
+        file: "src/content/pages/home.json"
+        fields:
+          - {label: "Título Principal", name: "hero_title", widget: "string"}
+          - {label: "Subtítulo", name: "hero_subtitle", widget: "text"}
+          - {label: "Imagen de Fondo", name: "hero_image", widget: "image"}
+      
+      - name: "about"
+        label: "Quiénes Somos"
+        file: "src/content/pages/about.json"
+        fields:
+          - {label: "Título", name: "title", widget: "string"}
+          - {label: "Historia", name: "history", widget: "markdown"}
+      
+      - name: "contact"
+        label: "Info de Contacto (Global)"
+        file: "src/content/pages/contact.json"
+        fields:
+          - {label: "Dirección", name: "address", widget: "string"}
+          - {label: "Teléfono", name: "phone", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "WhatsApp (Solo número con 57)", name: "whatsapp", widget: "string"}
