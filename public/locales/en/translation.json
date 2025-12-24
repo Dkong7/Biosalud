@@ -1,0 +1,26 @@
+﻿{
+    "footer":  {
+                   "contact_title":  "Contact",
+                   "rights":  "All rights reserved.",
+                   "whatsapp_btn":  "WhatsApp Chat",
+                   "description":  "Health movement founded by Dr. Atom Inoe. We promote self-management and vitality through natural and bioenergetic medicine.",
+                   "navigation":  "Navigation",
+                   "services_list":  [
+                                         "Comprehensive Bioenergetic Exam",
+                                         "Workshops \u0026 Conferences",
+                                         "Family Lodging (Anolaima)",
+                                         "Self-management Therapies"
+                                     ],
+                   "services_title":  "Services",
+                   "address":  "Anolaima, Cundinamarca. Colombia."
+               },
+    "navbar":  {
+                   "about":  "About Us",
+                   "shop":  "Shop",
+                   "contact":  "Contact",
+                   "calendar":  "Calendar",
+                   "home":  "Home",
+                   "program":  "Program",
+                   "blog":  "Blog"
+               }
+}

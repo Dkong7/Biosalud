@@ -1,0 +1,26 @@
+﻿{
+    "footer":  {
+                   "contact_title":  "Contacto",
+                   "rights":  "Todos los derechos reservados.",
+                   "whatsapp_btn":  "Chat WhatsApp",
+                   "description":  "Movimiento de salud fundado por el Dr. Atom Inoe. Promovemos la autogestión y la vitalidad a través de la medicina natural y bioenergética.",
+                   "navigation":  "Navegación",
+                   "services_list":  [
+                                         "Examen Integral Bioenergético",
+                                         "Talleres y Conferencias",
+                                         "Hospedaje Familiar (Anolaima)",
+                                         "Terapias de Autogestión"
+                                     ],
+                   "services_title":  "Servicios",
+                   "address":  "Anolaima, Cundinamarca. Colombia."
+               },
+    "navbar":  {
+                   "about":  "Quiénes Somos",
+                   "shop":  "Tienda",
+                   "contact":  "Contacto",
+                   "calendar":  "Calendario",
+                   "home":  "Inicio",
+                   "program":  "Programa",
+                   "blog":  "Blog"
+               }
+}
