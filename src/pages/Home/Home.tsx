@@ -15,7 +15,6 @@ export const Home = () => {
   const { t, i18n } = useTranslation();
   const [showModal, setShowModal] = useState(true);
 
-  // ID de videos según idioma
   const getVideoId = () => {
     switch (i18n.language) {
       case 'ja': return 'u7_JbP_9N_M';
@@ -27,10 +26,10 @@ export const Home = () => {
   return (
     <div className="flex flex-col w-full relative">
       
-      {/* --- 1. HERO SECTION CON VIDEO Y MODAL --- */}
-      <section className="relative h-[90vh] w-full overflow-hidden bg-black">
+      {/* --- 1. HERO SECTION (VIDEO) --- */}
+      <section className="relative h-[85vh] w-full overflow-hidden bg-black">
         
-        {/* VIDEO BACKGROUND (Loop, Muted, Autoplay) */}
+        {/* Video Background */}
         <div className="absolute inset-0 w-full h-full pointer-events-none scale-125">
            <iframe 
              className="w-full h-full object-cover opacity-80"
@@ -41,31 +40,31 @@ export const Home = () => {
            ></iframe>
         </div>
 
-        {/* SI EL MODAL ESTÁ CERRADO: Botón discreto para volver a abrirlo */}
+        {/* Botón "Ver Mensaje" (Visible solo si el modal está cerrado) */}
         {!showModal && (
           <button 
             onClick={() => setShowModal(true)}
-            className="absolute bottom-10 left-10 z-20 text-white bg-bio-verde/80 px-6 py-2 rounded-full hover:bg-bio-amarillo hover:text-bio-verde transition font-bold font-eras"
+            className="absolute bottom-32 left-10 z-20 text-white bg-bio-verde/80 px-6 py-2 rounded-full hover:bg-bio-amarillo hover:text-bio-verde transition font-bold font-eras border border-white/20 backdrop-blur-md"
           >
-            Ver Mensaje
+            Ver Bienvenida
           </button>
         )}
 
-        {/* --- EL MODAL (Overlay Completo) --- */}
+        {/* --- EL MODAL (Z-INDEX 50: Encima de todo) --- */}
         {showModal && (
-          <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm animate-fadeIn">
-            <div className="relative text-center max-w-5xl px-4">
+          <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm animate-fadeIn p-4">
+            <div className="relative text-center max-w-5xl w-full">
               
-              {/* Botón X para cerrar */}
+              {/* Botón Cerrar (X) */}
               <button 
                 onClick={() => setShowModal(false)}
-                className="absolute -top-20 right-0 md:-right-10 text-white/50 hover:text-bio-amarillo text-5xl transition-colors"
+                className="absolute -top-16 right-0 md:-right-4 text-white hover:text-bio-amarillo text-5xl transition-colors focus:outline-none"
                 title={t('home.close_modal')}
               >
                 <FontAwesomeIcon icon={faTimes} />
               </button>
 
-              {/* Texto Principal */}
+              {/* Contenido Modal */}
               <span className="font-eras text-bio-amarillo tracking-[0.3em] uppercase text-sm md:text-xl mb-6 block drop-shadow-lg">
                 {t('home.hero_subtitle')}
               </span>
@@ -74,7 +73,7 @@ export const Home = () => {
                 <span className="italic font-cambria font-normal text-bio-amarillo">{t('home.hero_highlight')}</span>
               </h1>
               
-              {/* FOTO CLICKEABLE (Lleva a Quiénes Somos) */}
+              {/* Foto Redonda (Link a About) */}
               <div className="flex flex-col items-center mt-8 group">
                  <NavLink to="/about" className="relative w-32 h-32 md:w-48 md:h-48 rounded-full border-4 border-bio-amarillo overflow-hidden shadow-2xl hover:scale-110 transition-transform duration-300 cursor-pointer">
                     <img src="/atom1.png" alt="Dr Atom" className="w-full h-full object-cover" />
@@ -83,14 +82,52 @@ export const Home = () => {
                     {t('home.modal_hint')}
                  </span>
               </div>
-
             </div>
           </div>
         )}
       </section>
 
-      {/* --- 2. PILARES (LO QUE FALTABA) --- */}
-      <section className="py-20 bg-[#f8f9f3]">
+      {/* --- 2. MÓDULO FLOTANTE (ATOM & ALICIA) --- */}
+      {/* Z-INDEX 40: Debajo del Modal (50) pero encima del Hero */}
+      <div className="container mx-auto px-4 relative z-40 -mt-24 mb-20">
+        <div className="bg-white shadow-2xl rounded-sm p-8 md:p-10 max-w-6xl mx-auto border-t-4 border-bio-amarillo flex flex-col lg:flex-row items-center gap-10">
+          
+          {/* Texto Izquierda */}
+          <div className="flex-1 text-center lg:text-left order-2 lg:order-1">
+            <h2 className="font-eras text-3xl text-bio-verde font-bold mb-4">
+              {t('home.floating_title')}
+            </h2>
+            <p className="font-cambria text-gray-600 leading-relaxed mb-8 text-lg">
+              "{t('home.floating_desc')}"
+            </p>
+            <NavLink to="/program" className="inline-block bg-bio-verde text-white font-eras font-bold py-3 px-8 hover:bg-bio-amarillo hover:text-bio-verde transition-all duration-300 rounded-sm uppercase tracking-wide text-sm">
+              {t('home.btn_program')}
+            </NavLink>
+          </div>
+
+          {/* Fotos Derecha (Atom & Alicia) */}
+          <div className="w-full lg:w-5/12 order-1 lg:order-2 flex gap-4">
+             <div className="flex-1 text-center">
+                <div className="w-full h-56 bg-gray-200 overflow-hidden rounded-sm shadow-md mb-2">
+                  <img src="/atom1.png" alt="Atom" className="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500" />
+                </div>
+                <h4 className="font-eras font-bold text-bio-verde text-sm">Dr. Atom Inoe</h4>
+                <p className="text-[10px] text-gray-500 uppercase tracking-widest">{t('home.atom_role')}</p>
+             </div>
+             <div className="flex-1 text-center">
+                <div className="w-full h-56 bg-gray-200 overflow-hidden rounded-sm shadow-md mb-2">
+                  <img src="/alicia1.png" alt="Alicia" className="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500" />
+                </div>
+                <h4 className="font-eras font-bold text-bio-verde text-sm">Dra. Alicia Cabrera</h4>
+                <p className="text-[10px] text-gray-500 uppercase tracking-widest">{t('home.alicia_role')}</p>
+             </div>
+          </div>
+
+        </div>
+      </div>
+
+      {/* --- 3. PILARES --- */}
+      <section className="py-16 bg-[#f8f9f3]">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h3 className="font-eras text-2xl text-bio-verde font-bold mb-3 uppercase tracking-widest">{t('home.pillars_title')}</h3>
@@ -99,25 +136,25 @@ export const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
             {/* Pilar 1 */}
-            <div className="group p-8 hover:-translate-y-2 transition-transform duration-300 bg-white rounded-sm shadow-sm hover:shadow-lg">
-              <div className="w-20 h-20 mx-auto bg-gray-50 rounded-full flex items-center justify-center mb-6 border border-bio-verde/10 group-hover:bg-bio-verde transition-colors duration-300">
-                <FontAwesomeIcon icon={faTint} className="text-3xl text-bio-verde group-hover:text-white transition-colors duration-300" />
+            <div className="group p-8 bg-white rounded-sm shadow-sm hover:shadow-lg transition-all duration-300">
+              <div className="w-20 h-20 mx-auto bg-gray-50 rounded-full flex items-center justify-center mb-6 border border-bio-verde/10 group-hover:bg-bio-verde transition-colors">
+                <FontAwesomeIcon icon={faTint} className="text-3xl text-bio-verde group-hover:text-white transition-colors" />
               </div>
               <h4 className="font-eras text-xl font-bold text-bio-verde mb-3">{t('home.pillar_1_title')}</h4>
               <p className="font-cambria text-gray-600 text-sm leading-relaxed">{t('home.pillar_1_desc')}</p>
             </div>
             {/* Pilar 2 */}
-            <div className="group p-8 hover:-translate-y-2 transition-transform duration-300 bg-white rounded-sm shadow-sm hover:shadow-lg">
-              <div className="w-20 h-20 mx-auto bg-gray-50 rounded-full flex items-center justify-center mb-6 border border-bio-verde/10 group-hover:bg-bio-verde transition-colors duration-300">
-                <FontAwesomeIcon icon={faSun} className="text-3xl text-bio-verde group-hover:text-white transition-colors duration-300" />
+            <div className="group p-8 bg-white rounded-sm shadow-sm hover:shadow-lg transition-all duration-300">
+              <div className="w-20 h-20 mx-auto bg-gray-50 rounded-full flex items-center justify-center mb-6 border border-bio-verde/10 group-hover:bg-bio-verde transition-colors">
+                <FontAwesomeIcon icon={faSun} className="text-3xl text-bio-verde group-hover:text-white transition-colors" />
               </div>
               <h4 className="font-eras text-xl font-bold text-bio-verde mb-3">{t('home.pillar_2_title')}</h4>
               <p className="font-cambria text-gray-600 text-sm leading-relaxed">{t('home.pillar_2_desc')}</p>
             </div>
             {/* Pilar 3 */}
-            <div className="group p-8 hover:-translate-y-2 transition-transform duration-300 bg-white rounded-sm shadow-sm hover:shadow-lg">
-              <div className="w-20 h-20 mx-auto bg-gray-50 rounded-full flex items-center justify-center mb-6 border border-bio-verde/10 group-hover:bg-bio-verde transition-colors duration-300">
-                <FontAwesomeIcon icon={faHandsHelping} className="text-3xl text-bio-verde group-hover:text-white transition-colors duration-300" />
+            <div className="group p-8 bg-white rounded-sm shadow-sm hover:shadow-lg transition-all duration-300">
+              <div className="w-20 h-20 mx-auto bg-gray-50 rounded-full flex items-center justify-center mb-6 border border-bio-verde/10 group-hover:bg-bio-verde transition-colors">
+                <FontAwesomeIcon icon={faHandsHelping} className="text-3xl text-bio-verde group-hover:text-white transition-colors" />
               </div>
               <h4 className="font-eras text-xl font-bold text-bio-verde mb-3">{t('home.pillar_3_title')}</h4>
               <p className="font-cambria text-gray-600 text-sm leading-relaxed">{t('home.pillar_3_desc')}</p>
@@ -126,7 +163,7 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* --- 3. FRASE PARALLAX (LO QUE FALTABA) --- */}
+      {/* --- 4. FRASE PARALLAX --- */}
       <section className="relative py-28 bg-bio-verde text-center text-white px-4 overflow-hidden">
         <div className="absolute inset-0 opacity-5 pointer-events-none flex justify-between items-center">
            <FontAwesomeIcon icon={faLeaf} className="text-[25rem] -ml-20" />
@@ -143,7 +180,7 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* --- 4. CTA PARTICIPA (LO QUE FALTABA) --- */}
+      {/* --- 5. CTA PARTICIPA --- */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-16">
           <div className="md:w-1/2 text-left">

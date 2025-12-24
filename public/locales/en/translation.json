@@ -5,7 +5,12 @@
     "hero_title": "Recupera tu Vitalidad",
     "hero_highlight": "Naturalmente",
     "modal_hint": "Haz clic en la foto para conocer nuestra historia",
-    "close_modal": "Cerrar y Ver Video",
+    "close_modal": "Cerrar y Ver Contenido",
+    "floating_title": "Salud Autogestionada",
+    "floating_desc": "Tu cuerpo es sabio y te dice lo que necesitas. Sin dependencias, despertando tu propio sanador interno.",
+    "btn_program": "CONOCER EL PROGRAMA",
+    "atom_role": "Fundador",
+    "alicia_role": "Cofundadora",
     "pillars_title": "NUESTROS PILARES",
     "pillar_1_title": "Urosalud",
     "pillar_1_desc": "La orinoterapia mueve, sacude y fortalece el sistema inmunológico.",
@@ -21,18 +26,8 @@
     "btn_contact": "CONTÁCTANOS",
     "btn_shop": "VER TIENDA"
   },
-  "contact": {
-    "title": "Contáctanos",
-    "address": "Finca Biosalud, Anolaima",
-    "email_addr": "bioatom11@hotmail.com",
-    "social": "Síguenos"
-  },
-  "about": {
-    "bio_p1": "Nacido en Manchuria...",
-    "bio_p2": "Su camino marcó un hito...",
-    "alicia_title": "Dra. Alicia Cabrera",
-    "alicia_subtitle": "Terapeuta Homeopática"
-  },
+  "contact": { "title": "Contáctanos", "address": "Finca Biosalud, Anolaima", "email_addr": "bioatom11@hotmail.com", "social": "Síguenos" },
+  "about": { "bio_title": "Dr. Atom Inoe", "alicia_title": "Dra. Alicia Cabrera", "interview_title": "La Esencia de la Biosalud" },
   "program": { "cta_more": "Más Información" },
   "calendar": { "title": "Calendario de Actividades" },
   "blog": { "title": "Blog Biosalud" }
