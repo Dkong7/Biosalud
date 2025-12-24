@@ -1,36 +1,39 @@
 ﻿{
-  "navbar": { "home": "Home", "about": "About Us", "program": "Program", "calendar": "Calendar", "shop": "Shop", "blog": "Blog", "contact": "Contact" },
+  "navbar": { "home": "Inicio", "about": "Quiénes Somos", "program": "Programa", "calendar": "Calendario", "shop": "Tienda", "blog": "Blog", "contact": "Contacto" },
   "home": {
-    "hero_subtitle": "LATIN AMERICAN BIOHEALTH MOVEMENT",
-    "hero_title": "Recover Your Vitality",
-    "hero_highlight": "Naturally",
-    "modal_hint": "Click photo to meet us",
-    "close_modal": "Close & Watch Video"
-  },
-  "about": {
-    "alicia_title": "Dr. Alicia Cabrera",
-    "alicia_subtitle": "Homeopathic Therapist & Co-Founder",
-    "alicia_desc": "From Bogota, Dr. Alicia is an expert in pain management via magnets, Reiki, and Acupuncture."
-  },
-  "program": {
-    "edu_title": "Education Plan",
-    "edu_desc": "Lectures on health philosophy and nutrition.",
-    "eco_title": "Ecotourism (Anolaima)",
-    "eco_desc": "Nature retreats and workshops in our farm.",
-    "home_title": "Home Visits (Bogota)",
-    "home_desc": "Diagnosis and therapies in your home.",
-    "cta_more": "More Info"
+    "hero_subtitle": "MOVIMIENTO LATINOAMERICANO DE BIOSALUD",
+    "hero_title": "Recupera tu Vitalidad",
+    "hero_highlight": "Naturalmente",
+    "modal_hint": "Haz clic en la foto para conocer nuestra historia",
+    "close_modal": "Cerrar y Ver Video",
+    "pillars_title": "NUESTROS PILARES",
+    "pillar_1_title": "Urosalud",
+    "pillar_1_desc": "La orinoterapia mueve, sacude y fortalece el sistema inmunológico.",
+    "pillar_2_title": "Energía Vital",
+    "pillar_2_desc": "Ejercicios bioenergéticos para reactivar tus mitocondrias.",
+    "pillar_3_title": "Autogestión",
+    "pillar_3_desc": "Rompe la dependencia y gestiona tu propia salud.",
+    "quote": "No existe enfermedad en cuerpo sano. Tu cuerpo es sabio.",
+    "quote_author": "Dr. Atom Inoe",
+    "cta_tag": "PARTICIPA",
+    "cta_title": "Comienza tu camino hacia una vida plena",
+    "cta_desc": "Talleres, hospedaje y terapias.",
+    "btn_contact": "CONTÁCTANOS",
+    "btn_shop": "VER TIENDA"
   },
   "contact": {
-    "title": "Contact Us",
-    "form_name": "Full Name",
-    "form_email": "Email",
-    "form_msg": "Message",
-    "form_btn": "Send Message",
-    "success": "Message sent!",
-    "address": "Biosalud Farm, Anolaima",
-    "email_addr": "bioatom11@hotmail.com"
+    "title": "Contáctanos",
+    "address": "Finca Biosalud, Anolaima",
+    "email_addr": "bioatom11@hotmail.com",
+    "social": "Síguenos"
   },
-  "calendar": { "title": "Events Calendar", "book_btn": "Book Now" },
-  "blog": { "title": "Biohealth Blog", "read_more": "Read More", "back": "Back" }
+  "about": {
+    "bio_p1": "Nacido en Manchuria...",
+    "bio_p2": "Su camino marcó un hito...",
+    "alicia_title": "Dra. Alicia Cabrera",
+    "alicia_subtitle": "Terapeuta Homeopática"
+  },
+  "program": { "cta_more": "Más Información" },
+  "calendar": { "title": "Calendario de Actividades" },
+  "blog": { "title": "Blog Biosalud" }
 }
