@@ -2,13 +2,11 @@
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes, faUserCircle, faSignOutAlt, faSignInAlt, faCog } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { LanguageSwitch } from '../ui/LanguageSwitch';
-import { useAuth } from '../../context/AuthContext';
 
 export const Navbar = () => {
   const { t, i18n } = useTranslation();
-  const { user, login, logout, isLoggedIn } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -58,47 +56,13 @@ export const Navbar = () => {
           ))}
         </div>
 
-        {/* CONTROLES DERECHA */}
+        {/* CONTROLES DERECHA (Solo Idioma y Menú Móvil) */}
         <div className="flex items-center gap-4">
           <div className="hidden md:block">
             <LanguageSwitch />
           </div>
           
-          {/* LÓGICA DE AUTENTICACIÓN */}
-          {isLoggedIn ? (
-            <div className="flex items-center gap-3 border-l border-bio-verde/20 pl-4 ml-2">
-              <span className="text-xs font-bold text-bio-verde hidden xl:block">
-                {user?.user_metadata?.full_name || 'Admin'}
-              </span>
-              
-              <a 
-                href="/admin" 
-                target="_blank" 
-                className="text-bio-verde hover:text-bio-amarillo text-xl transition-colors" 
-                title="Panel Admin"
-              >
-                <FontAwesomeIcon icon={faCog} />
-              </a>
-
-              <button 
-                onClick={logout} 
-                className="text-bio-rojo hover:text-red-700 text-xl transition-colors"
-                title="Salir"
-              >
-                <FontAwesomeIcon icon={faSignOutAlt} />
-              </button>
-            </div>
-          ) : (
-            <button 
-              onClick={login}
-              className="text-bio-verde hover:text-bio-amarillo text-xl transition-colors ml-2"
-              title="Acceso"
-            >
-              <FontAwesomeIcon icon={faUserCircle} />
-            </button>
-          )}
-
-          {/* Menú Hamburguesa */}
+          {/* Menú Hamburguesa (Móvil) */}
           <button onClick={toggleMenu} className="lg:hidden text-bio-verde text-2xl focus:outline-none ml-2">
             <FontAwesomeIcon icon={isOpen ? faTimes : faBars} />
           </button>
@@ -123,23 +87,6 @@ export const Navbar = () => {
             ))}
             <div className="mt-4">
               <LanguageSwitch />
-            </div>
-            
-            <div className="mt-4 pt-4 border-t border-bio-verde/10 w-full flex justify-center gap-6">
-              {isLoggedIn ? (
-                <>
-                  <a href="/admin" target="_blank" className="flex items-center gap-2 text-bio-verde font-bold">
-                    <FontAwesomeIcon icon={faCog} /> Admin
-                  </a>
-                  <button onClick={logout} className="flex items-center gap-2 text-bio-rojo font-bold">
-                    <FontAwesomeIcon icon={faSignOutAlt} /> Salir
-                  </button>
-                </>
-              ) : (
-                <button onClick={() => { setIsOpen(false); login(); }} className="flex items-center gap-2 text-bio-verde font-bold">
-                  <FontAwesomeIcon icon={faSignInAlt} /> Entrar
-                </button>
-              )}
             </div>
           </div>
         </div>
