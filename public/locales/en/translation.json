@@ -1,26 +1,57 @@
 ﻿{
-    "footer":  {
-                   "contact_title":  "Contact",
-                   "rights":  "All rights reserved.",
-                   "whatsapp_btn":  "WhatsApp Chat",
-                   "description":  "Health movement founded by Dr. Atom Inoe. We promote self-management and vitality through natural and bioenergetic medicine.",
-                   "navigation":  "Navigation",
-                   "services_list":  [
-                                         "Comprehensive Bioenergetic Exam",
-                                         "Workshops \u0026 Conferences",
-                                         "Family Lodging (Anolaima)",
-                                         "Self-management Therapies"
-                                     ],
-                   "services_title":  "Services",
-                   "address":  "Anolaima, Cundinamarca. Colombia."
-               },
-    "navbar":  {
-                   "about":  "About Us",
-                   "shop":  "Shop",
-                   "contact":  "Contact",
-                   "calendar":  "Calendar",
-                   "home":  "Home",
-                   "program":  "Program",
-                   "blog":  "Blog"
-               }
+  "navbar": {
+    "home": "Home",
+    "about": "About Us",
+    "program": "Program",
+    "calendar": "Calendar",
+    "shop": "Shop",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero_subtitle": "LATIN AMERICAN BIOHEALTH MOVEMENT",
+    "hero_title": "Recover Your Vitality",
+    "hero_highlight": "Naturally",
+    "floating_title": "Self-Managed Health",
+    "floating_desc": "Your body is wise and tells you what it needs. We promote vitality through natural medicine, urine therapy, and bioenergetic movement. Without dependencies, awakening your inner healer.",
+    "btn_program": "VIEW PROGRAM",
+    "atom_role": "Founder",
+    "alicia_role": "Co-Founder",
+    "pillars_title": "OUR PILLARS",
+    "pillar_1_title": "Urohealth",
+    "pillar_1_desc": "Urine therapy moves, shakes, and strengthens the immune system. A treasure of antibodies for your own healing.",
+    "pillar_2_title": "Vital Energy",
+    "pillar_2_desc": "Bioenergetic exercises and walks to reactivate your mitochondria and raise your body temperature and will to live.",
+    "pillar_3_title": "Self-Management",
+    "pillar_3_desc": "Break the dependency. Learn to manage your own health away from commercial medicine that only treats symptoms.",
+    "quote": "There is no disease in a healthy body. Your body is wise and tells you what it needs.",
+    "quote_author": "Dr. Atom Inoe",
+    "cta_tag": "JOIN US",
+    "cta_title": "Start your path to a full life",
+    "cta_desc": "In-person workshops, family lodging in Anolaima, and self-management therapies. Join our community and reclaim your power.",
+    "btn_contact": "CONTACT US",
+    "btn_shop": "VISIT SHOP"
+  },
+  "about": {
+    "hero_tag": "OUR HISTORY",
+    "hero_title": "From Natural Hospital to a",
+    "hero_highlight": "Full Life",
+    "bio_title": "Dr. Atom Inoe",
+    "bio_subtitle": "Founder of the Latin American Biohealth Movement",
+    "bio_p1": "Born in Manchuria in 1944, Oriental Master Atom Inoe has dedicated his life to the pursuit of holistic health. Graduated from the Tokyo School of Oriental Medicine.",
+    "bio_p2": "His path marked a milestone in Nicaragua, founding the 'Natural Hospital'. In 1990, together with Dr. Uriu, the concept of Biohealth was born.",
+    "bio_p3": "He currently resides in Anolaima, Colombia, practicing organic farming alongside his wife, Dr. Alicia Cabrera.",
+    "interview_tag": "EXCLUSIVE INTERVIEW",
+    "interview_title": "The Essence of Biohealth",
+    "interview_desc": "Get to know Dr. Atom's thoughts and philosophy first-hand in this deep conversation about life and healing."
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "We are here to guide you",
+    "phone": "Phone / WhatsApp",
+    "email": "Email",
+    "location": "Location",
+    "location_desc": "Biosalud Farm, Anolaima, Cundinamarca, Colombia.",
+    "social": "Follow Us"
+  }
 }
