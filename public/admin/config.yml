@@ -1,0 +1,38 @@
+﻿backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+# Idioma del panel (opcional, por defecto inglés)
+locale: 'es'
+
+# URL del sitio para previsualizar
+site_url: https://biosaludmovement.netlify.app
+
+# Colecciones de contenido (Menús del panel)
+collections:
+  # 1. BLOG
+  - name: "blog"
+    label: "Blog"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Fecha", name: "date", widget: "datetime"}
+      - {label: "Imagen Destacada", name: "thumbnail", widget: "image"}
+      - {label: "Cuerpo", name: "body", widget: "markdown"}
+
+  # 2. TIENDA (Productos)
+  - name: "products"
+    label: "Tienda"
+    folder: "src/content/products"
+    create: true
+    fields:
+      - {label: "Nombre del Producto", name: "title", widget: "string"}
+      - {label: "Precio (COP)", name: "price", widget: "number"}
+      - {label: "Imagen", name: "image", widget: "image"}
+      - {label: "Descripción", name: "description", widget: "text"}
+      - {label: "Categoría", name: "category", widget: "select", options: ["Suplementos", "Equipos", "Libros"]}
