@@ -2,50 +2,46 @@
   name: git-gateway
   branch: main
 
+# ESTO ES LA CLAVE: Permite editar desde tu PC sin servidores externos
+local_backend: true
+
 media_folder: "public/assets/uploads"
 public_folder: "/assets/uploads"
 locale: 'es'
 
-# Habilitar previsualización local (opcional)
-local_backend: true
-
 collections:
-  # --- COLECCIÓN: BLOG ---
+  # --- BLOG ---
   - name: "blog"
     label: "📝 Blog"
     files:
       - name: "posts"
         label: "Artículos del Blog"
         file: "src/data/blog_db.json"
-        description: "Gestiona las entradas del blog en 3 idiomas"
         fields:
           - {label: "Entradas", name: "posts", widget: "list", fields: [
-              {label: "ID Único (sin espacios)", name: "id", widget: "string"},
+              {label: "ID Único (ej: post-1)", name: "id", widget: "string"},
               {label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false},
               {label: "Autor", name: "author", widget: "string", default: "Dr. Atom Inoe"},
               {label: "Categoría", name: "category", widget: "select", options: ["Salud", "Energía", "Filosofía", "Nutrición", "Ecología"]},
-              {label: "Imagen Principal", name: "image", widget: "image"},
+              {label: "Imagen", name: "image", widget: "image"},
               
-              # ESPAÑOL
               {label: "--- ESPAÑOL ---", name: "sep_es", widget: "hidden"},
               {label: "Título (ES)", name: "title_es", widget: "string"},
-              {label: "Resumen Corto (ES)", name: "excerpt_es", widget: "text"},
-              {label: "Contenido Completo (ES)", name: "content_es", widget: "markdown"},
+              {label: "Resumen (ES)", name: "excerpt_es", widget: "text"},
+              {label: "Contenido (ES)", name: "content_es", widget: "markdown"},
 
-              # INGLÉS
               {label: "--- INGLÉS ---", name: "sep_en", widget: "hidden"},
               {label: "Title (EN)", name: "title_en", widget: "string", required: false},
               {label: "Excerpt (EN)", name: "excerpt_en", widget: "text", required: false},
               {label: "Content (EN)", name: "content_en", widget: "markdown", required: false},
 
-              # JAPONÉS
               {label: "--- JAPONÉS ---", name: "sep_ja", widget: "hidden"},
               {label: "Title (JA)", name: "title_ja", widget: "string", required: false},
               {label: "Excerpt (JA)", name: "excerpt_ja", widget: "text", required: false},
               {label: "Content (JA)", name: "content_ja", widget: "markdown", required: false}
             ]}
 
-  # --- COLECCIÓN: TIENDA ---
+  # --- TIENDA ---
   - name: "shop"
     label: "🛍️ Tienda"
     files:
@@ -54,22 +50,19 @@ collections:
         file: "src/data/shop_db.json"
         fields:
           - {label: "Lista de Productos", name: "products", widget: "list", fields: [
-              {label: "ID (ej: manual-1)", name: "id", widget: "string"},
+              {label: "ID", name: "id", widget: "string"},
               {label: "Imagen", name: "image", widget: "image"},
               {label: "Precio (COP)", name: "price", widget: "number"},
               {label: "Link Mercado Pago", name: "link", widget: "string"},
-              
               {label: "Nombre (ES)", name: "title_es", widget: "string"},
               {label: "Descripción (ES)", name: "desc_es", widget: "text"},
-              
               {label: "Name (EN)", name: "title_en", widget: "string", required: false},
               {label: "Description (EN)", name: "desc_en", widget: "text", required: false},
-              
               {label: "Name (JA)", name: "title_ja", widget: "string", required: false},
               {label: "Description (JA)", name: "desc_ja", widget: "text", required: false}
             ]}
 
-  # --- COLECCIÓN: CALENDARIO ---
+  # --- CALENDARIO ---
   - name: "calendar"
     label: "📅 Calendario"
     files:
