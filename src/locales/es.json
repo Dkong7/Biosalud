@@ -1,0 +1,29 @@
+﻿{
+  "navbar": {
+    "home": "Inicio",
+    "about": "Quiénes Somos",
+    "programs": "Programas",
+    "blog": "Blog",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "main_title": "Salud Perfecta con Autogestión",
+    "modal_title": "Bienvenido a Biosalud",
+    "modal_text": "Descubre el camino hacia tu bienestar integral de la mano de expertos.",
+    "cta": "Empezar Ahora"
+  },
+  "programs": {
+    "section_title": "Nuestros Programas",
+    "section_subtitle": "Rutas diseñadas para restaurar tu equilibrio vital",
+    "prog1": "Desintoxicación Profunda",
+    "prog2": "Nutrición Celular",
+    "prog3": "Mente Zen & Bioenergía"
+  },
+  "about": {
+    "title": "Nuestro Equipo",
+    "bio_subtitle": "Experto en Medicina Bioenergética y Oriental",
+    "bio_p1": "El Dr. Atom Inoe combina la sabiduría milenaria de la medicina oriental con los avances modernos de la bioenergética.",
+    "bio_p2": "Su enfoque se centra en tratar la raíz de los desequilibrios, no solo los síntomas.",
+    "bio_p3": "Con más de 20 años de experiencia, ha guiado a miles de pacientes hacia la autogestión de su salud."
+  }
+}

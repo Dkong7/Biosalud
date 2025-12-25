@@ -3,17 +3,13 @@ import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
-  faTimes, 
-  faTint, 
-  faSun, 
-  faHandsHelping, 
-  faLeaf, 
-  faHeartbeat 
+  faTint, faSun, faHandsHelping, faLeaf, faHeartbeat,
+  faChalkboardTeacher, faTree, faUserMd, faArrowRight, faTimes
 } from '@fortawesome/free-solid-svg-icons';
 
 export const Home = () => {
   const { t, i18n } = useTranslation();
-  const [showModal, setShowModal] = useState(true);
+  const [showHeroBox, setShowHeroBox] = useState(true);
 
   const getVideoId = () => {
     switch (i18n.language) {
@@ -26,13 +22,13 @@ export const Home = () => {
   return (
     <div className="flex flex-col w-full relative">
       
-      {/* --- 1. HERO SECTION (VIDEO) --- */}
-      <section className="relative h-[85vh] w-full overflow-hidden bg-black">
+      {/* --- 1. HERO SECTION --- */}
+      <section className="relative h-[90vh] w-full overflow-hidden bg-black flex items-center justify-center">
         
         {/* Video Background */}
         <div className="absolute inset-0 w-full h-full pointer-events-none scale-125">
            <iframe 
-             className="w-full h-full object-cover opacity-80"
+             className="w-full h-full object-cover opacity-60"
              src={`https://www.youtube.com/embed/${getVideoId()}?autoplay=1&mute=1&controls=0&loop=1&playlist=${getVideoId()}&showinfo=0&rel=0&iv_load_policy=3&disablekb=1`}
              title="Hero Video"
              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -40,95 +36,133 @@ export const Home = () => {
            ></iframe>
         </div>
 
-        {/* Botón "Ver Mensaje" (Solo si modal está cerrado) */}
-        {!showModal && (
-          <button 
-            onClick={() => setShowModal(true)}
-            className="absolute bottom-32 left-10 z-20 text-white bg-bio-verde/80 px-6 py-2 rounded-full hover:bg-bio-amarillo hover:text-bio-verde transition font-bold font-eras border border-white/20 backdrop-blur-md"
-          >
-            Ver Bienvenida
-          </button>
-        )}
-
-        {/* --- EL MODAL (Pequeño, solo texto) --- */}
-        {showModal && (
-          <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm animate-fadeIn p-4">
-            
-            {/* Caja del Modal */}
-            <div className="relative bg-black/80 border border-white/10 p-10 md:p-14 rounded-sm max-w-3xl text-center shadow-2xl">
+        {/* CAJA DE TEXTO CON "X" */}
+        {showHeroBox && (
+          <div className="relative bg-black/80 border border-white/10 p-10 md:p-14 rounded-sm max-w-3xl text-center shadow-2xl mx-4 z-20 animate-fadeIn">
               
-              {/* Botón Cerrar (X) */}
+              {/* Botón X para cerrar */}
               <button 
-                onClick={() => setShowModal(false)}
-                className="absolute top-4 right-4 text-white/50 hover:text-bio-amarillo text-2xl transition-colors focus:outline-none"
-                title={t('home.close_modal')}
+                onClick={() => setShowHeroBox(false)}
+                className="absolute top-4 right-4 text-white/50 hover:text-bio-amarillo text-xl transition-colors"
+                title={t('home.close_box')}
               >
                 <FontAwesomeIcon icon={faTimes} />
               </button>
 
-              {/* Contenido (Solo Texto) */}
               <span className="font-eras text-bio-amarillo tracking-[0.3em] uppercase text-xs md:text-sm mb-6 block">
                 {t('home.hero_subtitle')}
               </span>
+              
               <h1 className="font-eras text-4xl md:text-6xl text-white font-bold mb-6 leading-tight">
                 {t('home.hero_title')} <br />
                 <span className="italic font-cambria font-normal text-bio-amarillo">{t('home.hero_highlight')}</span>
               </h1>
-              <p className="text-gray-300 font-cambria italic">
+              
+              <p className="text-gray-300 font-cambria italic text-lg border-t border-white/10 pt-6 mt-6">
                 "{t('home.quote')}"
               </p>
-
-            </div>
           </div>
+        )}
+
+        {/* Botón para volver a abrir la caja si se cerró */}
+        {!showHeroBox && (
+           <button 
+             onClick={() => setShowHeroBox(true)}
+             className="absolute bottom-32 z-20 bg-bio-verde/80 text-white px-6 py-2 rounded-full font-bold font-eras hover:bg-bio-amarillo hover:text-bio-verde transition backdrop-blur-md border border-white/20"
+           >
+             {t('home.open_box')}
+           </button>
         )}
       </section>
 
-      {/* --- 2. MÓDULO FLOTANTE (ATOM & ALICIA) --- */}
-      <div className="container mx-auto px-4 relative z-40 -mt-24 mb-20">
+      {/* --- 2. MÓDULO FLOTANTE --- */}
+      <div className="container mx-auto px-4 relative z-30 -mt-24 mb-16">
         <div className="bg-white shadow-2xl rounded-sm p-8 md:p-10 max-w-6xl mx-auto border-t-4 border-bio-amarillo flex flex-col lg:flex-row items-center gap-10">
-          
-          {/* Texto Izquierda */}
           <div className="flex-1 text-center lg:text-left order-2 lg:order-1">
-            <h2 className="font-eras text-3xl text-bio-verde font-bold mb-4">
-              {t('home.floating_title')}
-            </h2>
-            <p className="font-cambria text-gray-600 leading-relaxed mb-8 text-lg">
-              "{t('home.floating_desc')}"
-            </p>
+            <h2 className="font-eras text-3xl text-bio-verde font-bold mb-4">{t('home.floating_title')}</h2>
+            <p className="font-cambria text-gray-600 leading-relaxed mb-8 text-lg">"{t('home.floating_desc')}"</p>
             <NavLink to="/program" className="inline-block bg-bio-verde text-white font-eras font-bold py-3 px-8 hover:bg-bio-amarillo hover:text-bio-verde transition-all duration-300 rounded-sm uppercase tracking-wide text-sm">
               {t('home.btn_program')}
             </NavLink>
           </div>
-
-          {/* Fotos Derecha (Clickeables -> About) */}
           <div className="w-full lg:w-5/12 order-1 lg:order-2 flex gap-4">
-             
-             {/* Dr. Atom */}
              <NavLink to="/about" className="flex-1 text-center group cursor-pointer">
                 <div className="w-full h-56 bg-gray-200 overflow-hidden rounded-sm shadow-md mb-2 relative">
-                  <div className="absolute inset-0 bg-bio-amarillo/0 group-hover:bg-bio-amarillo/20 transition-colors z-10"></div>
                   <img src="/atom1.png" alt="Atom" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500" />
                 </div>
-                <h4 className="font-eras font-bold text-bio-verde text-sm group-hover:text-bio-amarillo transition-colors">Dr. Atom Inoe</h4>
+                <h4 className="font-eras font-bold text-bio-verde text-sm group-hover:text-bio-amarillo">Dr. Atom Inoe</h4>
                 <p className="text-[10px] text-gray-500 uppercase tracking-widest">{t('home.atom_role')}</p>
              </NavLink>
-
-             {/* Dra. Alicia */}
              <NavLink to="/about" className="flex-1 text-center group cursor-pointer">
                 <div className="w-full h-56 bg-gray-200 overflow-hidden rounded-sm shadow-md mb-2 relative">
-                  <div className="absolute inset-0 bg-bio-amarillo/0 group-hover:bg-bio-amarillo/20 transition-colors z-10"></div>
                   <img src="/alicia1.png" alt="Alicia" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500" />
                 </div>
-                <h4 className="font-eras font-bold text-bio-verde text-sm group-hover:text-bio-amarillo transition-colors">Dra. Alicia Cabrera</h4>
+                <h4 className="font-eras font-bold text-bio-verde text-sm group-hover:text-bio-amarillo">Dra. Alicia Cabrera</h4>
                 <p className="text-[10px] text-gray-500 uppercase tracking-widest">{t('home.alicia_role')}</p>
              </NavLink>
-
           </div>
-
         </div>
       </div>
 
-      {/* --- 3. PILARES --- */}
+      {/* --- 3. SNEAK PEEK PROGRAMAS (CARDS) --- */}
+      <section className="py-16 bg-white mb-10 border-b border-gray-100">
+         <div className="container mx-auto px-6">
+            <div className="text-center mb-12">
+               <h3 className="font-eras text-3xl text-bio-verde font-bold">{t('home.prog_title')}</h3>
+               <div className="w-12 h-1 bg-bio-amarillo mx-auto mt-3"></div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+               
+               {/* CARD 1: Educación */}
+               <NavLink to="/program" className="group bg-white rounded-sm shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col">
+                  {/* Imagen Placeholder */}
+                  <div className="h-48 bg-gray-200 w-full flex items-center justify-center text-bio-verde/20 group-hover:bg-bio-verde/5 transition-colors">
+                      <FontAwesomeIcon icon={faChalkboardTeacher} className="text-6xl" />
+                  </div>
+                  {/* Contenido */}
+                  <div className="p-6 flex flex-col flex-1">
+                      <h4 className="font-eras font-bold text-bio-verde text-xl mb-3 group-hover:text-bio-amarillo transition-colors">{t('home.prog_edu')}</h4>
+                      <p className="text-sm text-gray-600 mb-6 flex-1">{t('home.prog_edu_desc')}</p>
+                      <span className="text-bio-verde font-bold text-sm uppercase tracking-wide border-t border-gray-100 pt-4 flex justify-between items-center group-hover:text-bio-amarillo">
+                         Ver Detalles <FontAwesomeIcon icon={faArrowRight} />
+                      </span>
+                  </div>
+               </NavLink>
+
+               {/* CARD 2: Ecoturismo */}
+               <NavLink to="/program" className="group bg-white rounded-sm shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col">
+                  <div className="h-48 bg-gray-200 w-full flex items-center justify-center text-bio-amarillo/40 group-hover:bg-bio-amarillo/10 transition-colors">
+                      <FontAwesomeIcon icon={faTree} className="text-6xl" />
+                  </div>
+                  <div className="p-6 flex flex-col flex-1">
+                      <h4 className="font-eras font-bold text-bio-verde text-xl mb-3 group-hover:text-bio-amarillo transition-colors">{t('home.prog_eco')}</h4>
+                      <p className="text-sm text-gray-600 mb-6 flex-1">{t('home.prog_eco_desc')}</p>
+                      <span className="text-bio-verde font-bold text-sm uppercase tracking-wide border-t border-gray-100 pt-4 flex justify-between items-center group-hover:text-bio-amarillo">
+                         Ver Detalles <FontAwesomeIcon icon={faArrowRight} />
+                      </span>
+                  </div>
+               </NavLink>
+
+               {/* CARD 3: Domiciliarios */}
+               <NavLink to="/program" className="group bg-white rounded-sm shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col">
+                  <div className="h-48 bg-gray-200 w-full flex items-center justify-center text-bio-rojo/30 group-hover:bg-bio-rojo/5 transition-colors">
+                      <FontAwesomeIcon icon={faUserMd} className="text-6xl" />
+                  </div>
+                  <div className="p-6 flex flex-col flex-1">
+                      <h4 className="font-eras font-bold text-bio-verde text-xl mb-3 group-hover:text-bio-amarillo transition-colors">{t('home.prog_home')}</h4>
+                      <p className="text-sm text-gray-600 mb-6 flex-1">{t('home.prog_home_desc')}</p>
+                      <span className="text-bio-verde font-bold text-sm uppercase tracking-wide border-t border-gray-100 pt-4 flex justify-between items-center group-hover:text-bio-amarillo">
+                         Ver Detalles <FontAwesomeIcon icon={faArrowRight} />
+                      </span>
+                  </div>
+               </NavLink>
+
+            </div>
+         </div>
+      </section>
+
+      {/* --- 4. PILARES --- */}
       <section className="py-16 bg-[#f8f9f3]">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
@@ -136,7 +170,7 @@ export const Home = () => {
             <div className="w-16 h-1 bg-bio-amarillo mx-auto"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-            {/* Pilar 1 */}
+            {/* Pilares... (Igual que antes) */}
             <div className="group p-8 bg-white rounded-sm shadow-sm hover:shadow-lg transition-all duration-300">
               <div className="w-20 h-20 mx-auto bg-gray-50 rounded-full flex items-center justify-center mb-6 border border-bio-verde/10 group-hover:bg-bio-verde transition-colors">
                 <FontAwesomeIcon icon={faTint} className="text-3xl text-bio-verde group-hover:text-white transition-colors" />
@@ -144,7 +178,6 @@ export const Home = () => {
               <h4 className="font-eras text-xl font-bold text-bio-verde mb-3">{t('home.pillar_1_title')}</h4>
               <p className="font-cambria text-gray-600 text-sm leading-relaxed">{t('home.pillar_1_desc')}</p>
             </div>
-            {/* Pilar 2 */}
             <div className="group p-8 bg-white rounded-sm shadow-sm hover:shadow-lg transition-all duration-300">
               <div className="w-20 h-20 mx-auto bg-gray-50 rounded-full flex items-center justify-center mb-6 border border-bio-verde/10 group-hover:bg-bio-verde transition-colors">
                 <FontAwesomeIcon icon={faSun} className="text-3xl text-bio-verde group-hover:text-white transition-colors" />
@@ -152,7 +185,6 @@ export const Home = () => {
               <h4 className="font-eras text-xl font-bold text-bio-verde mb-3">{t('home.pillar_2_title')}</h4>
               <p className="font-cambria text-gray-600 text-sm leading-relaxed">{t('home.pillar_2_desc')}</p>
             </div>
-            {/* Pilar 3 */}
             <div className="group p-8 bg-white rounded-sm shadow-sm hover:shadow-lg transition-all duration-300">
               <div className="w-20 h-20 mx-auto bg-gray-50 rounded-full flex items-center justify-center mb-6 border border-bio-verde/10 group-hover:bg-bio-verde transition-colors">
                 <FontAwesomeIcon icon={faHandsHelping} className="text-3xl text-bio-verde group-hover:text-white transition-colors" />
@@ -164,7 +196,7 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* --- 4. FRASE PARALLAX --- */}
+      {/* --- 5. FRASE PARALLAX --- */}
       <section className="relative py-28 bg-bio-verde text-center text-white px-4 overflow-hidden">
         <div className="absolute inset-0 opacity-5 pointer-events-none flex justify-between items-center">
            <FontAwesomeIcon icon={faLeaf} className="text-[25rem] -ml-20" />
@@ -181,7 +213,7 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* --- 5. CTA PARTICIPA --- */}
+      {/* --- 6. CTA PARTICIPA --- */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-16">
           <div className="md:w-1/2 text-left">
@@ -191,9 +223,7 @@ export const Home = () => {
             <h2 className="text-4xl md:text-5xl font-eras font-bold text-bio-verde mb-6 leading-tight">
               {t('home.cta_title')}
             </h2>
-            <p className="font-cambria text-gray-600 mb-8 text-lg">
-              {t('home.cta_desc')}
-            </p>
+            <p className="font-cambria text-gray-600 mb-8 text-lg">{t('home.cta_desc')}</p>
             <div className="flex flex-wrap gap-4">
               <NavLink to="/contact" className="bg-bio-verde text-white px-8 py-4 rounded-sm font-bold font-eras hover:bg-bio-amarillo hover:text-bio-verde transition-all duration-300 shadow-lg">
                 {t('home.btn_contact')}

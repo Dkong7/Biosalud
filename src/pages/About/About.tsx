@@ -8,7 +8,7 @@ export const About = () => {
   return (
     <div className="flex flex-col w-full animate-fadeIn pb-20">
       
-      {/* Header Simple */}
+      {/* Header */}
       <div className="bg-bio-verde text-white py-20 text-center relative overflow-hidden">
          <div className="absolute inset-0 opacity-10">
             <FontAwesomeIcon icon={faMountain} className="absolute -bottom-10 -left-10 text-[20rem] text-white" />
@@ -50,8 +50,7 @@ export const About = () => {
               <p className="font-cambria text-gray-700 text-lg leading-relaxed text-justify md:text-right">
                  Originaria de Bogotá, la Dra. Alicia es una experta terapeuta homeopática. 
                  Posee amplios conocimientos en el tratamiento del dolor mediante terapias alternativas, 
-                 incluyendo el uso de imanes (biomagnetismo), Reiki y Acupuntura. 
-                 Su enfoque integral y su calidez humana son el complemento perfecto para la filosofía de la Biosalud.
+                 incluyendo el uso de imanes (biomagnetismo), Reiki y Acupuntura.
               </p>
            </div>
         </div>
