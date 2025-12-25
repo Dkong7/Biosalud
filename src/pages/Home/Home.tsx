@@ -65,7 +65,7 @@ export const Home = () => {
         </div>
       </div>
 
-      {/* --- SNEAK PEEK PROGRAMAS (IMAGENES PNG) --- */}
+      {/* --- PROGRAMAS SNEAK PEEK (IMÁGENES CORREGIDAS) --- */}
       <section className="py-16 bg-white mb-10 border-b border-gray-100">
          <div className="container mx-auto px-6">
             <div className="text-center mb-12">
@@ -75,7 +75,7 @@ export const Home = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                
-               {/* CARD 1: Educación */}
+               {/* CARD 1: Educación = conferencias.png */}
                <NavLink to="/program/education" className="group bg-white rounded-sm shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col">
                   <div className="h-56 w-full overflow-hidden relative">
                       <div className="absolute inset-0 bg-bio-verde/20 group-hover:bg-transparent transition-colors z-10"></div>
@@ -90,7 +90,7 @@ export const Home = () => {
                   </div>
                </NavLink>
 
-               {/* CARD 2: Ecoturismo */}
+               {/* CARD 2: Ecoturismo = ecoturismo.png */}
                <NavLink to="/program/ecotourism" className="group bg-white rounded-sm shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col">
                   <div className="h-56 w-full overflow-hidden relative">
                       <div className="absolute inset-0 bg-bio-amarillo/20 group-hover:bg-transparent transition-colors z-10"></div>
@@ -105,7 +105,7 @@ export const Home = () => {
                   </div>
                </NavLink>
 
-               {/* CARD 3: Domiciliarios */}
+               {/* CARD 3: Domiciliarios = terapias.png */}
                <NavLink to="/program/therapy" className="group bg-white rounded-sm shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col">
                   <div className="h-56 w-full overflow-hidden relative">
                       <div className="absolute inset-0 bg-bio-rojo/10 group-hover:bg-transparent transition-colors z-10"></div>
@@ -125,10 +125,8 @@ export const Home = () => {
       </section>
 
       {/* --- PILARES, FRASE, CTA --- */}
-      {/* (Se mantienen igual que en el código anterior, resumido aquí para brevedad pero el archivo completo tendrá todo) */}
       <section className="py-16 bg-[#f8f9f3]">
         <div className="container mx-auto px-6">
-           {/* Pilares content... */}
            <div className="text-center mb-16"><h3 className="font-eras text-2xl text-bio-verde font-bold mb-3 uppercase tracking-widest">{t('home.pillars_title')}</h3><div className="w-16 h-1 bg-bio-amarillo mx-auto"></div></div>
            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
               <div className="group p-8 bg-white rounded-sm shadow-sm hover:shadow-lg transition-all duration-300"><div className="w-20 h-20 mx-auto bg-gray-50 rounded-full flex items-center justify-center mb-6 border border-bio-verde/10 group-hover:bg-bio-verde transition-colors"><FontAwesomeIcon icon={faTint} className="text-3xl text-bio-verde group-hover:text-white transition-colors" /></div><h4 className="font-eras text-xl font-bold text-bio-verde mb-3">{t('home.pillar_1_title')}</h4><p className="font-cambria text-gray-600 text-sm leading-relaxed">{t('home.pillar_1_desc')}</p></div>
