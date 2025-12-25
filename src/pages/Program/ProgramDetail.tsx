@@ -15,7 +15,7 @@ export const ProgramDetail = () => {
           title: t('program.edu_title'),
           intro: t('program.edu_intro'),
           desc: t('program.edu_content'),
-          img: "/conferencias.png",
+          img: "/conferencias.jpg", // <--- CORREGIDO .JPG
           features: [
             t('program.edu_feat_1'),
             t('program.edu_feat_2'),

@@ -65,7 +65,7 @@ export const Home = () => {
         </div>
       </div>
 
-      {/* --- PROGRAMAS SNEAK PEEK (IMÁGENES CORREGIDAS) --- */}
+      {/* --- PROGRAMAS SNEAK PEEK --- */}
       <section className="py-16 bg-white mb-10 border-b border-gray-100">
          <div className="container mx-auto px-6">
             <div className="text-center mb-12">
@@ -75,11 +75,11 @@ export const Home = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                
-               {/* CARD 1: Educación = conferencias.png */}
+               {/* CARD 1: EDUCACIÓN -> conferencias.jpg */}
                <NavLink to="/program/education" className="group bg-white rounded-sm shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col">
                   <div className="h-56 w-full overflow-hidden relative">
                       <div className="absolute inset-0 bg-bio-verde/20 group-hover:bg-transparent transition-colors z-10"></div>
-                      <img src="/conferencias.png" alt="Educación" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                      <img src="/conferencias.jpg" alt="Educación" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
                   </div>
                   <div className="p-6 flex flex-col flex-1">
                       <h4 className="font-eras font-bold text-bio-verde text-xl mb-3">{t('home.prog_edu')}</h4>
@@ -90,7 +90,7 @@ export const Home = () => {
                   </div>
                </NavLink>
 
-               {/* CARD 2: Ecoturismo = ecoturismo.png */}
+               {/* CARD 2: ECOTURISMO -> ecoturismo.png */}
                <NavLink to="/program/ecotourism" className="group bg-white rounded-sm shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col">
                   <div className="h-56 w-full overflow-hidden relative">
                       <div className="absolute inset-0 bg-bio-amarillo/20 group-hover:bg-transparent transition-colors z-10"></div>
@@ -105,7 +105,7 @@ export const Home = () => {
                   </div>
                </NavLink>
 
-               {/* CARD 3: Domiciliarios = terapias.png */}
+               {/* CARD 3: DOMICILIARIOS -> terapias.png */}
                <NavLink to="/program/therapy" className="group bg-white rounded-sm shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col">
                   <div className="h-56 w-full overflow-hidden relative">
                       <div className="absolute inset-0 bg-bio-rojo/10 group-hover:bg-transparent transition-colors z-10"></div>
