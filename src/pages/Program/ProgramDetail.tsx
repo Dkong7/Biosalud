@@ -1,7 +1,7 @@
 ﻿import { useParams, NavLink, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, faCheckCircle, faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
 
 export const ProgramDetail = () => {
   const { t } = useTranslation();
@@ -13,23 +13,41 @@ export const ProgramDetail = () => {
       case 'education':
         return {
           title: t('program.edu_title'),
-          desc: t('program.edu_full_desc'),
-          img: "/conferencias.png", // IMAGEN CORRECTA
-          features: ["Charlas Magistrales", "Nutrición Consciente", "Filosofía Biosalud"]
+          intro: t('program.edu_intro'),
+          desc: t('program.edu_content'),
+          img: "/conferencias.png",
+          features: [
+            t('program.edu_feat_1'),
+            t('program.edu_feat_2'),
+            t('program.edu_feat_3'),
+            t('program.edu_feat_4')
+          ]
         };
       case 'ecotourism':
         return {
           title: t('program.eco_title'),
-          desc: t('program.eco_full_desc'),
-          img: "/ecoturismo.png", // IMAGEN CORRECTA
-          features: ["Hospedaje Familiar", "Caminatas Ecológicas", "Huerta Orgánica"]
+          intro: t('program.eco_intro'),
+          desc: t('program.eco_content'),
+          img: "/ecoturismo.png",
+          features: [
+            t('program.eco_feat_1'),
+            t('program.eco_feat_2'),
+            t('program.eco_feat_3'),
+            t('program.eco_feat_4')
+          ]
         };
       case 'therapy':
         return {
           title: t('program.home_title'),
-          desc: t('program.home_full_desc'),
-          img: "/terapias.png", // IMAGEN CORRECTA
-          features: ["Diagnóstico Integral", "Biomagnetismo", "Acupuntura"]
+          intro: t('program.home_intro'),
+          desc: t('program.home_content'),
+          img: "/terapias.png",
+          features: [
+            t('program.home_feat_1'),
+            t('program.home_feat_2'),
+            t('program.home_feat_3'),
+            t('program.home_feat_4')
+          ]
         };
       default:
         return null;
@@ -44,39 +62,73 @@ export const ProgramDetail = () => {
 
   return (
     <div className="w-full bg-white animate-fadeIn min-h-screen">
-       <div className="h-[50vh] relative overflow-hidden bg-black">
-          <img src={data.img} alt={data.title} className="w-full h-full object-cover opacity-60" />
+       
+       {/* HERO DEL DETALLE */}
+       <div className="h-[60vh] relative overflow-hidden bg-black">
+          <img src={data.img} alt={data.title} className="w-full h-full object-cover opacity-50" />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-             <h1 className="font-eras text-4xl md:text-6xl text-white font-bold mb-4 drop-shadow-lg">{data.title}</h1>
-             <button onClick={() => navigate(-1)} className="text-bio-amarillo hover:text-white transition gap-2 flex items-center font-bold text-lg bg-black/30 px-4 py-2 rounded-full backdrop-blur-sm">
+             <span className="text-bio-amarillo font-bold tracking-[0.2em] uppercase text-sm mb-4">{t('program.details_title')}</span>
+             <h1 className="font-eras text-4xl md:text-6xl text-white font-bold mb-8 drop-shadow-xl max-w-4xl">{data.title}</h1>
+             
+             <button onClick={() => navigate(-1)} className="text-white hover:text-bio-amarillo transition gap-2 flex items-center font-bold text-sm bg-white/10 px-6 py-3 rounded-full backdrop-blur-md border border-white/20">
                 <FontAwesomeIcon icon={faArrowLeft} /> {t('program.back_btn')}
              </button>
           </div>
        </div>
 
-       <div className="container mx-auto px-6 py-16">
-          <div className="max-w-4xl mx-auto">
-             <p className="font-cambria text-xl text-gray-700 leading-relaxed mb-10 first-letter:text-5xl first-letter:font-bold first-letter:text-bio-verde first-letter:mr-2 float-left">
-                {data.desc}
-             </p>
-             <div className="clear-both"></div>
+       {/* CONTENIDO PRINCIPAL */}
+       <div className="container mx-auto px-6 py-20">
+          <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-16">
              
-             <h3 className="font-eras text-2xl text-bio-verde font-bold mb-6 mt-8">Características</h3>
-             <ul className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
-                {data.features.map((feat, idx) => (
-                   <li key={idx} className="bg-gray-50 p-4 rounded-sm border-l-4 border-bio-amarillo flex items-center gap-3 shadow-sm">
-                      <FontAwesomeIcon icon={faCheckCircle} className="text-bio-verde" />
-                      <span className="font-bold text-gray-700">{feat}</span>
-                   </li>
-                ))}
-             </ul>
+             {/* Columna Izquierda: Texto Principal */}
+             <div className="lg:col-span-2">
+                
+                {/* Intro Destacada */}
+                <div className="mb-10 relative">
+                   <FontAwesomeIcon icon={faQuoteLeft} className="text-6xl text-gray-100 absolute -top-4 -left-6 -z-10" />
+                   <p className="font-cambria text-2xl text-bio-verde font-bold italic leading-relaxed">
+                      "{data.intro}"
+                   </p>
+                </div>
 
-             <div className="bg-[#f8f9f3] p-8 rounded-sm text-center border border-gray-100">
-                <h3 className="font-eras text-2xl font-bold text-bio-verde mb-4">{t('home.cta_tag')}</h3>
-                <NavLink to="/contact" className="inline-block bg-bio-verde text-white px-8 py-4 rounded-sm font-bold font-eras hover:bg-bio-amarillo hover:text-bio-verde transition-all shadow-lg">
-                   {t('home.btn_contact')}
-                </NavLink>
+                {/* Descripción Detallada */}
+                <div className="prose prose-lg text-gray-700 font-cambria text-lg leading-relaxed text-justify">
+                   <p>{data.desc}</p>
+                </div>
+
+                <div className="mt-12 p-8 bg-[#f8f9f3] rounded-sm border-l-4 border-bio-verde">
+                   <h3 className="font-eras text-xl font-bold text-bio-verde mb-4">{t('program.target_title')}</h3>
+                   <p className="text-gray-600 italic">
+                      Este programa está diseñado para personas que buscan retomar el control de su salud, desconectarse del estrés urbano o requieren asistencia especializada para el dolor.
+                   </p>
+                </div>
              </div>
+
+             {/* Columna Derecha: Características y CTA */}
+             <div className="lg:col-span-1">
+                <div className="bg-white p-8 rounded-sm shadow-xl border border-gray-100 sticky top-24">
+                   <h3 className="font-eras text-xl font-bold text-gray-800 mb-6 pb-4 border-b border-gray-100">
+                      {t('program.methodology_title')}
+                   </h3>
+                   
+                   <ul className="space-y-4 mb-10">
+                      {data.features.map((feat, idx) => (
+                         <li key={idx} className="flex items-start gap-3">
+                            <FontAwesomeIcon icon={faCheckCircle} className="text-bio-amarillo mt-1" />
+                            <span className="text-gray-600 text-sm font-bold">{feat}</span>
+                         </li>
+                      ))}
+                   </ul>
+
+                   <div className="text-center">
+                      <NavLink to="/contact" className="block w-full bg-bio-verde text-white py-4 rounded-sm font-bold font-eras hover:bg-bio-amarillo hover:text-bio-verde transition-all shadow-lg uppercase tracking-wider text-sm">
+                         {t('home.btn_contact')}
+                      </NavLink>
+                      <p className="text-xs text-gray-400 mt-4">Cupos limitados / Agenda previa</p>
+                   </div>
+                </div>
+             </div>
+
           </div>
        </div>
     </div>

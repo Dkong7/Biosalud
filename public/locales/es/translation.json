@@ -48,13 +48,34 @@
     "interview_desc": "Conoce de primera mano la filosofía del Dr. Atom."
   },
   "program": {
+    "back_btn": "Volver a Programas",
+    "details_title": "Detalles del Programa",
+    "methodology_title": "Qué Incluye / Metodología",
+    "target_title": "¿Para quién es esto?",
+    
     "edu_title": "Plan de Educación Biosalud",
-    "edu_full_desc": "Nuestro ciclo de educación está diseñado para transformar conciencias. Incluye conferencias magistrales sobre la filosofía de la salud, talleres de nutrición consciente y la práctica de la autogestión para enfermedades crónicas.",
-    "eco_title": "Ecoturismo y Retiros",
-    "eco_full_desc": "Escapa de la ciudad y reencuéntrate con la naturaleza en nuestra finca en Anolaima. Ofrecemos hospedaje familiar, caminatas ecológicas, comida orgánica de la huerta y talleres vivenciales de agricultura y salud.",
-    "home_title": "Visitas Domiciliarias",
-    "home_full_desc": "Llevamos la experiencia Biosalud a tu hogar en Bogotá. Diagnóstico integral, terapias de dolor con imanes y acupuntura, y asesoría personalizada para pacientes con movilidad reducida.",
-    "back_btn": "Volver a Programas"
+    "edu_intro": "La educación es la base de la verdadera salud. No se trata solo de curar síntomas, sino de entender la filosofía de la vida y la muerte para vivir con plenitud.",
+    "edu_content": "Nuestro ciclo educativo está basado en las enseñanzas del Dr. Atom Inoe y la experiencia acumulada en 8 Congresos Mundiales de Biosalud. Abordamos la salud desde una perspectiva integral, enseñando la 'Urosalud' (Orinoterapia) como la flor reina de las terapias naturales, capaz de fortalecer el sistema inmunológico y despertar al sanador interno. También exploramos el desapego, la aceptación de la muerte natural y la nutrición consciente.",
+    "edu_feat_1": "Charlas Magistrales sobre Filosofía de Vida.",
+    "edu_feat_2": "Taller Práctico de Urosalud (Orinoterapia).",
+    "edu_feat_3": "Nutrición para reactivar las mitocondrias.",
+    "edu_feat_4": "Autogestión de enfermedades crónicas.",
+
+    "eco_title": "Ecoturismo y Retiros en Anolaima",
+    "eco_intro": "La Finca Biosalud en Anolaima no es un hotel, es un hogar. Un espacio para reconectar con la Pachamama, respirar aire puro y comer alimento vivo.",
+    "eco_content": "Ofrecemos una experiencia de inmersión total en la naturaleza. Aquí, el 'Hospital Natural' es el entorno mismo: el agua de páramo, el sol, la tierra y el silencio. Los visitantes participan en la vida de la finca, aprendiendo sobre agricultura orgánica, compartiendo alimentos cosechados en nuestra huerta y practicando el movimiento bioenergético al aire libre. Es un retiro para desintoxicar el cuerpo y calmar la mente, lejos del ruido de la ciudad.",
+    "eco_feat_1": "Hospedaje familiar en entorno campestre.",
+    "eco_feat_2": "Alimentación 100% Orgánica de la huerta.",
+    "eco_feat_3": "Caminatas Ecológicas y Baños de Bosque.",
+    "eco_feat_4": "Talleres vivenciales de siembra y cosecha.",
+
+    "home_title": "Visitas Domiciliarias (Bogotá)",
+    "home_intro": "Cuando el dolor impide el movimiento, Biosalud va a tu casa. Llevamos la terapia oriental y bioenergética a la comodidad de tu hogar.",
+    "home_content": "Este servicio está diseñado para pacientes con movilidad reducida o dolor agudo que no pueden desplazarse. La Dra. Alicia Cabrera y el equipo de Biosalud realizan un diagnóstico integral in-situ. Utilizamos terapias no invasivas como el Biomagnetismo (Imanes) para equilibrar el pH y reducir el dolor, Acupuntura para desbloquear canales de energía, y el método 'Gyaooo' (presión terapéutica) para ajustes óseos y musculares rápidos. El objetivo es recuperar la funcionalidad y aliviar el sufrimiento sin fármacos agresivos.",
+    "home_feat_1": "Diagnóstico Bioenergético (O-Ring Test).",
+    "home_feat_2": "Terapia de Dolor con Imanes y Acupuntura.",
+    "home_feat_3": "Ajuste Óseo y Muscular (Método Gyaooo).",
+    "home_feat_4": "Asesoría familiar para el cuidado del paciente."
   },
   "contact": { "title": "Contáctanos", "phone": "Teléfono", "email": "Correo", "social": "Síguenos", "location_desc": "Finca Biosalud, Anolaima", "form_name": "Nombre", "form_email": "Correo", "form_msg": "Mensaje", "form_btn": "Enviar" },
   "shop": { "title": "Tienda Oficial", "subtitle": "Libros y Productos", "buy_btn": "Comprar", "payment_note": "Pagos seguros con MercadoPago" },
