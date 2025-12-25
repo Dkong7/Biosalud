@@ -55,7 +55,6 @@
     "target_desc": "Este programa está diseñado para personas que buscan retomar el control de su salud, desconectarse del estrés urbano o requieren asistencia especializada para el dolor.",
     "questions_title": "¿Tienes dudas sobre cuál programa es para ti?",
     "talk_advisor": "Hablar con un Asesor",
-    
     "edu_title": "Plan de Educación Biosalud",
     "edu_intro": "La educación es la base de la verdadera salud. No se trata solo de curar síntomas, sino de entender la filosofía de la vida, el desapego y la Urosalud.",
     "edu_content": "Basado en los 8 Congresos Mundiales de Biosalud y las enseñanzas del Dr. Atom. Este programa profundiza en la 'Urosalud' (Orinoterapia) como la flor reina de las terapias naturales: un método que no discrimina edad ni condición social, capaz de reactivar el sistema nervioso parasimpático y fortalecer la inmunidad. También abordamos la aceptación de la muerte natural y el desarrollo de la alegría de vivir como herramienta de sanación.",
@@ -63,7 +62,6 @@
     "edu_feat_2": "Taller Práctico de Urosalud (Orinoterapia).",
     "edu_feat_3": "Nutrición Consciente y Mitocondrial.",
     "edu_feat_4": "Autogestión de enfermedades crónicas.",
-
     "eco_title": "Ecoturismo y Retiros en Anolaima",
     "eco_intro": "La Finca Biosalud no es un hotel, es un hogar. Un 'Hospital Natural' donde el aire, el agua de páramo y la tierra son los médicos.",
     "eco_content": "Ofrecemos una experiencia de inmersión total para desintoxicar el cuerpo y el espíritu. Los visitantes conviven en un entorno de agricultura orgánica, participan en caminatas ecológicas para elevar la temperatura corporal y reactivar las mitocondrias, y comparten alimentos vivos cosechados en nuestra huerta. Es un espacio para recuperar el instinto y la sensibilidad perdida por la vida urbana.",
@@ -71,7 +69,6 @@
     "eco_feat_2": "Alimentación 100% Orgánica de la huerta.",
     "eco_feat_3": "Caminatas Ecológicas y Baños de Bosque.",
     "eco_feat_4": "Talleres vivenciales de siembra.",
-
     "home_title": "Visitas Domiciliarias (Bogotá)",
     "home_intro": "Cuando el dolor impide el movimiento, llevamos la terapia oriental y bioenergética a la comodidad de tu hogar.",
     "home_content": "Este servicio está liderado por la Dra. Alicia Cabrera para pacientes con movilidad reducida. Realizamos un diagnóstico integral (O-Ring Test) y aplicamos terapias no invasivas como el Biomagnetismo para equilibrar el pH y aliviar el dolor, Acupuntura y el método 'Gyaooo' (grito terapéutico) para ajustes óseos y musculares rápidos y efectivos, devolviendo la funcionalidad sin fármacos agresivos.",
@@ -82,5 +79,19 @@
   },
   "contact": { "title": "Contáctanos", "phone": "Teléfono", "email": "Correo", "social": "Síguenos", "location_desc": "Finca Biosalud, Anolaima", "form_name": "Nombre", "form_email": "Correo", "form_msg": "Mensaje", "form_btn": "Enviar" },
   "shop": { "title": "Tienda Oficial", "subtitle": "Libros y Productos", "buy_btn": "Comprar", "payment_note": "Pagos seguros con MercadoPago" },
-  "calendar": { "title": "Calendario", "subtitle": "Agenda" }
+  "calendar": { 
+    "title": "Calendario de Actividades", 
+    "subtitle": "Agenda y Disponibilidad", 
+    "month_names": ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"], 
+    "legend_retreat": "Retiros", 
+    "legend_workshop": "Talleres", 
+    "legend_virtual": "Virtual", 
+    "event_1": "Taller Orinoterapia", 
+    "event_2": "Retiro Anolaima", 
+    "event_3": "Charla Virtual",
+    "modal_date": "Fecha Seleccionada",
+    "btn_reserve": "Reservar Cupo (WhatsApp)",
+    "no_event": "No hay eventos programados para este día.",
+    "inquire_date": "Consultar disponibilidad para esta fecha"
+  }
 }

@@ -55,7 +55,6 @@
     "target_desc": "This program is designed for people looking to regain control of their health, disconnect from urban stress, or require specialized assistance for pain.",
     "questions_title": "Not sure which program is for you?",
     "talk_advisor": "Speak with an Advisor",
-
     "edu_title": "Biohealth Education Plan",
     "edu_intro": "Education is the foundation of true health. Understand Urohealth and life philosophy.",
     "edu_content": "Based on 8 World Congresses. We teach 'Urohealth' (Urine Therapy) as the queen of natural therapies to reactivate the parasympathetic nervous system. We also cover acceptance of natural death and the joy of living.",
@@ -80,5 +79,19 @@
   },
   "contact": { "title": "Contact Us", "subtitle": "We are here to guide you", "phone": "Phone", "email": "Email", "social": "Follow Us", "location_desc": "Biosalud Farm, Anolaima", "form_name": "Name", "form_email": "Email", "form_msg": "Message", "form_btn": "Send" },
   "shop": { "title": "Official Shop", "subtitle": "Books & Products", "buy_btn": "Buy", "payment_note": "Secure payments via MercadoPago" },
-  "calendar": { "title": "Calendar", "subtitle": "Schedule" }
+  "calendar": { 
+    "title": "Calendar", 
+    "subtitle": "Schedule", 
+    "month_names": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], 
+    "legend_retreat": "Retreats", 
+    "legend_workshop": "Workshops", 
+    "legend_virtual": "Virtual", 
+    "event_1": "Urotherapy Workshop", 
+    "event_2": "Anolaima Retreat", 
+    "event_3": "Virtual Talk",
+    "modal_date": "Selected Date",
+    "btn_reserve": "Reserve Spot (WhatsApp)",
+    "no_event": "No events scheduled for this day.",
+    "inquire_date": "Inquire availability for this date"
+  }
 }
