@@ -23,13 +23,13 @@
     "cta_more": "詳細を見る",
     "pillars_title": "私たちの柱",
     "pillar_1_title": "尿療法",
-    "pillar_1_desc": "尿療法は免疫システムを揺り動かし、強化します。",
+    "pillar_1_desc": "免疫システムを強化します。",
     "pillar_2_title": "生命エネルギー",
     "pillar_2_desc": "ミトコンドリアを再活性化するための生体エネルギー運動。",
     "pillar_3_title": "自己管理",
-    "pillar_3_desc": "依存を断ち切り、自分の健康を自分で管理します。",
+    "pillar_3_desc": "自分の健康を自分で管理します。",
     "cta_tag": "参加する",
-    "cta_title": "充実した人生への道を始めましょう",
+    "cta_title": "充実した人生への道",
     "cta_desc": "ワークショップ、宿泊、セラピー。",
     "btn_contact": "お問い合わせ",
     "btn_shop": "ショップを見る"
@@ -39,19 +39,20 @@
     "hero_highlight": "充実した人生",
     "bio_title": "アトム・イノウエ博士",
     "bio_subtitle": "創設者",
-    "bio_p1": "1944年満州生まれ。東京で東洋医学を学ぶ。",
-    "bio_p2": "ニカラグアで自然病院を設立し、1990年にバイオヘルスの概念を確立。",
-    "bio_p3": "現在はアノライマに住み、有機農業を実践し、自己管理を教えている。",
     "alicia_title": "アリシア・カブレラ博士",
     "alicia_desc": "ボゴタ出身の熟練したホメオパシー療法士です。生体磁気（磁石）、レイキ、鍼治療を用いた痛みの治療に関する豊富な知識を持っています。",
     "interview_title": "バイオヘルスの本質",
-    "interview_desc": "アトム博士の死生観と哲学を直接知る。"
+    "interview_desc": "アトム博士の哲学。"
   },
   "program": {
     "back_btn": "プログラムに戻る",
     "details_title": "プログラムの詳細",
     "methodology_title": "含まれるもの / 方法論",
     "target_title": "対象者",
+    "target_desc": "このプログラムは、健康のコントロールを取り戻したい、都会のストレスから解放されたい、または痛みの専門的なケアを必要としている人々のために設計されています。",
+    "questions_title": "どのプログラムが自分に合っているかわかりませんか？",
+    "talk_advisor": "アドバイザーに相談する",
+
     "edu_title": "バイオヘルス教育計画",
     "edu_intro": "教育は真の健康の基盤です。尿療法と人生哲学を理解しましょう。",
     "edu_content": "8回の世界会議に基づいています。自然療法の女王である「尿療法」を深く学び、副交感神経を再活性化します。また、自然死の受容と生きる喜びについても取り組みます。",
@@ -75,6 +76,6 @@
     "home_feat_4": "家族へのケアアドバイス。"
   },
   "contact": { "title": "お問い合わせ", "subtitle": "私たちがご案内します", "phone": "電話", "email": "メール", "social": "フォロー", "location_desc": "バイオヘルス農場", "form_name": "お名前", "form_email": "メール", "form_msg": "メッセージ", "form_btn": "送信" },
-  "shop": { "title": "公式ショップ", "subtitle": "本と製品", "buy_btn": "購入", "payment_note": "MercadoPagoによる安全な支払い", "prod_1_title": "バイオヘルス・マニュアル", "prod_1_desc": "基本ガイド。", "prod_2_title": "生命の水", "prod_2_desc": "尿療法論文。", "prod_3_title": "公式Tシャツ", "prod_3_desc": "オーガニックコットン。", "prod_4_title": "マスター講演集", "prod_4_desc": "オーディオブック。" },
-  "calendar": { "title": "カレンダー", "subtitle": "スケジュール", "month_names": ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"], "legend_retreat": "リトリート", "legend_workshop": "ワークショップ", "legend_virtual": "バーチャル", "event_1": "尿療法ワークショップ", "event_2": "アノライマ・リトリート", "event_3": "バーチャル講演" }
+  "shop": { "title": "公式ショップ", "subtitle": "本と製品", "buy_btn": "購入", "payment_note": "MercadoPagoによる安全な支払い" },
+  "calendar": { "title": "カレンダー", "subtitle": "スケジュール" }
 }

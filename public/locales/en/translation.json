@@ -52,6 +52,10 @@
     "details_title": "Program Details",
     "methodology_title": "Included / Methodology",
     "target_title": "Who is this for?",
+    "target_desc": "This program is designed for people looking to regain control of their health, disconnect from urban stress, or require specialized assistance for pain.",
+    "questions_title": "Not sure which program is for you?",
+    "talk_advisor": "Speak with an Advisor",
+
     "edu_title": "Biohealth Education Plan",
     "edu_intro": "Education is the foundation of true health. Understand Urohealth and life philosophy.",
     "edu_content": "Based on 8 World Congresses. We teach 'Urohealth' (Urine Therapy) as the queen of natural therapies to reactivate the parasympathetic nervous system. We also cover acceptance of natural death and the joy of living.",
@@ -75,6 +79,6 @@
     "home_feat_4": "Family care advice."
   },
   "contact": { "title": "Contact Us", "subtitle": "We are here to guide you", "phone": "Phone", "email": "Email", "social": "Follow Us", "location_desc": "Biosalud Farm, Anolaima", "form_name": "Name", "form_email": "Email", "form_msg": "Message", "form_btn": "Send" },
-  "shop": { "title": "Official Shop", "subtitle": "Books & Products", "buy_btn": "Buy", "payment_note": "Secure payments via MercadoPago", "prod_1_title": "Biohealth Manual", "prod_1_desc": "Fundamental guide.", "prod_2_title": "The Water of Life", "prod_2_desc": "Treatise on Urohealth.", "prod_3_title": "Official T-Shirt", "prod_3_desc": "Organic cotton.", "prod_4_title": "Master Lectures", "prod_4_desc": "Audiobook." },
-  "calendar": { "title": "Calendar", "subtitle": "Schedule", "month_names": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], "legend_retreat": "Retreats", "legend_workshop": "Workshops", "legend_virtual": "Virtual", "event_1": "Urotherapy Workshop", "event_2": "Anolaima Retreat", "event_3": "Virtual Talk" }
+  "shop": { "title": "Official Shop", "subtitle": "Books & Products", "buy_btn": "Buy", "payment_note": "Secure payments via MercadoPago" },
+  "calendar": { "title": "Calendar", "subtitle": "Schedule" }
 }

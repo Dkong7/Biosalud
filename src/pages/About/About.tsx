@@ -48,9 +48,7 @@ export const About = () => {
               <p className="text-sm font-bold text-bio-amarillo uppercase tracking-widest mb-6">{t('home.alicia_role')}</p>
               
               <p className="font-cambria text-gray-700 text-lg leading-relaxed text-justify md:text-right">
-                 Originaria de Bogotá, la Dra. Alicia es una experta terapeuta homeopática. 
-                 Posee amplios conocimientos en el tratamiento del dolor mediante terapias alternativas, 
-                 incluyendo el uso de imanes (biomagnetismo), Reiki y Acupuntura.
+                 {t('about.alicia_desc')}
               </p>
            </div>
         </div>
