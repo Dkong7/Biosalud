@@ -4,6 +4,7 @@ import { Footer } from './components/layout/Footer';
 import { Home } from './pages/Home/Home';
 import { About } from './pages/About/About';
 import { Program } from './pages/Program/Program';
+import { ProgramDetail } from './pages/Program/ProgramDetail'; // Nueva
 import { Calendar } from './pages/Calendar/Calendar';
 import { Shop } from './pages/Shop/Shop';
 import { Blog } from './pages/Blog/Blog';
@@ -19,6 +20,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/program" element={<Program />} />
+            <Route path="/program/:id" element={<ProgramDetail />} /> {/* Ruta Dinámica */}
             <Route path="/calendar" element={<Calendar />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/blog" element={<Blog />} />

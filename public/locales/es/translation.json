@@ -20,6 +20,7 @@
     "prog_eco_desc": "Planes de visita a la finca, hospedaje y contacto natural.",
     "prog_home": "Visitas Domiciliarias",
     "prog_home_desc": "Terapias y diagnósticos en la comodidad de tu hogar en Bogotá.",
+    "cta_more": "Saber más",
     "pillars_title": "NUESTROS PILARES",
     "pillar_1_title": "Urosalud",
     "pillar_1_desc": "La orinoterapia mueve, sacude y fortalece el sistema inmunológico.",
@@ -42,46 +43,20 @@
     "bio_p2": "Fundó el Hospital Natural en Nicaragua y creó el concepto de Biosalud en 1990.",
     "bio_p3": "Hoy vive en Anolaima, practicando la agricultura orgánica.",
     "alicia_title": "Dra. Alicia Cabrera",
-    "alicia_desc": "Experta terapeuta homeopática de Bogotá. Biomagnetismo, Reiki y Acupuntura.",
+    "alicia_desc": "Originaria de Bogotá, la Dra. Alicia es una experta terapeuta homeopática. Posee amplios conocimientos en el tratamiento del dolor mediante terapias con imanes (biomagnetismo), Reiki y Acupuntura.",
     "interview_title": "La Esencia de la Biosalud",
     "interview_desc": "Conoce de primera mano la filosofía del Dr. Atom."
   },
-  "contact": {
-    "title": "Contáctanos",
-    "subtitle": "Estamos aquí para guiarte",
-    "phone": "Teléfono",
-    "email": "Correo",
-    "social": "Síguenos",
-    "location_desc": "Finca Biosalud, Anolaima, Cundinamarca",
-    "form_name": "Nombre",
-    "form_email": "Correo",
-    "form_msg": "Mensaje",
-    "form_btn": "Enviar Mensaje"
+  "program": {
+    "edu_title": "Plan de Educación Biosalud",
+    "edu_full_desc": "Nuestro ciclo de educación está diseñado para transformar conciencias. Incluye conferencias magistrales sobre la filosofía de la salud, talleres de nutrición consciente y la práctica de la autogestión para enfermedades crónicas.",
+    "eco_title": "Ecoturismo y Retiros",
+    "eco_full_desc": "Escapa de la ciudad y reencuéntrate con la naturaleza en nuestra finca en Anolaima. Ofrecemos hospedaje familiar, caminatas ecológicas, comida orgánica de la huerta y talleres vivenciales de agricultura y salud.",
+    "home_title": "Visitas Domiciliarias",
+    "home_full_desc": "Llevamos la experiencia Biosalud a tu hogar en Bogotá. Diagnóstico integral, terapias de dolor con imanes y acupuntura, y asesoría personalizada para pacientes con movilidad reducida.",
+    "back_btn": "Volver a Programas"
   },
-  "shop": {
-    "title": "Tienda Oficial",
-    "subtitle": "Libros, Audiolibros y Productos",
-    "buy_btn": "Comprar con MercadoPago",
-    "prod_1_title": "Manual de Biosalud",
-    "prod_1_desc": "La guía fundamental del Dr. Atom Inoe para la autogestión.",
-    "prod_2_title": "El Agua de la Vida",
-    "prod_2_desc": "Tratado completo sobre la Urosalud y sus beneficios.",
-    "prod_3_title": "Camiseta Oficial",
-    "prod_3_desc": "Algodón orgánico. Diseño: 'Recupera tu Vitalidad'.",
-    "prod_4_title": "Conferencias Maestras",
-    "prod_4_desc": "Audio Libro. Recopilación de charlas sobre el desapego.",
-    "payment_note": "Nota: Pagos seguros vía MercadoPago (PSE, Tarjeta, Efecty)."
-  },
-  "calendar": {
-    "title": "Calendario de Actividades",
-    "subtitle": "Agenda y Disponibilidad",
-    "month_names": ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
-    "legend_retreat": "Retiros",
-    "legend_workshop": "Talleres",
-    "legend_virtual": "Virtual",
-    "status_available": "Disponible",
-    "event_1": "Taller Orinoterapia",
-    "event_2": "Retiro Anolaima",
-    "event_3": "Charla Virtual"
-  }
+  "contact": { "title": "Contáctanos", "phone": "Teléfono", "email": "Correo", "social": "Síguenos", "location_desc": "Finca Biosalud, Anolaima", "form_name": "Nombre", "form_email": "Correo", "form_msg": "Mensaje", "form_btn": "Enviar" },
+  "shop": { "title": "Tienda Oficial", "subtitle": "Libros y Productos", "buy_btn": "Comprar", "payment_note": "Pagos seguros con MercadoPago" },
+  "calendar": { "title": "Calendario", "subtitle": "Agenda" }
 }
