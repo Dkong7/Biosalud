@@ -1,8 +1,9 @@
 ﻿import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronLeft, faChevronRight, faTimes, faCalendarCheck, faWhatsapp } from '@fortawesome/free-solid-svg-icons';
-import { faWhatsapp as faWhatsappBrand } from '@fortawesome/free-brands-svg-icons';
+import { faChevronLeft, faChevronRight, faTimes, faCalendarCheck } from '@fortawesome/free-solid-svg-icons';
+// CORRECCIÓN: Importar faWhatsapp desde el paquete de marcas (brands)
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 export const Calendar = () => {
   const { t, i18n } = useTranslation();
@@ -26,7 +27,6 @@ export const Calendar = () => {
   };
 
   const handleDateClick = (day: number, evt: any) => {
-    // Crear objeto de fecha real para mostrar
     const dateObj = new Date(currentMonth.getFullYear(), currentMonth.getMonth(), day);
     setSelectedDate(dateObj);
     setSelectedEvent(evt);
@@ -37,7 +37,6 @@ export const Calendar = () => {
     setSelectedEvent(null);
   };
 
-  // Función para abrir WhatsApp
   const handleReserve = () => {
     if (!selectedDate) return;
     
@@ -152,7 +151,8 @@ export const Calendar = () => {
                 onClick={handleReserve}
                 className="w-full bg-[#25D366] text-white font-bold py-3 rounded-sm hover:bg-[#128C7E] transition-colors flex items-center justify-center gap-2"
               >
-                 <FontAwesomeIcon icon={faWhatsappBrand} className="text-xl" />
+                 {/* Icono Corregido */}
+                 <FontAwesomeIcon icon={faWhatsapp} className="text-xl" />
                  {selectedEvent ? t('calendar.btn_reserve') : t('calendar.inquire_date')}
               </button>
 
