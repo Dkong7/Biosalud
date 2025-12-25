@@ -1,0 +1,16 @@
+﻿{
+  "products": [
+    {
+      "id": "manual-biosalud",
+      "image": "/manual.jpg",
+      "price": 50000,
+      "link": "https://link.mercadopago.com.co/EJEMPLO",
+      "title_es": "Manual de Biosalud",
+      "desc_es": "La guía fundamental del Dr. Atom.",
+      "title_en": "Biohealth Manual",
+      "desc_en": "Fundamental guide.",
+      "title_ja": "バイオヘルス・マニュアル",
+      "desc_ja": "基本ガイド。"
+    }
+  ]
+}

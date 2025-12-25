@@ -1,0 +1,20 @@
+﻿{
+  "posts": [
+    {
+      "id": "urosalud-revolucion",
+      "date": "2025-12-20",
+      "author": "Dr. Atom Inoe",
+      "category": "Salud",
+      "image": "/conferencias.jpg",
+      "title_es": "Urosalud: La Revolución de tu Propia Medicina",
+      "excerpt_es": "Descubre por qué la orina no es un desecho, sino un suero autólogo perfecto.",
+      "content_es": "<p>Existe un tabú histórico...</p>",
+      "title_en": "Urohealth: The Revolution of Your Own Medicine",
+      "excerpt_en": "Discover why urine is not waste...",
+      "content_en": "<p>There is a historical taboo...</p>",
+      "title_ja": "尿療法：あなた自身の薬の革命",
+      "excerpt_ja": "なぜ尿は老廃物ではないのか...",
+      "content_ja": "<p>歴史的なタブーが...</p>"
+    }
+  ]
+}

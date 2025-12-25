@@ -6,40 +6,81 @@ media_folder: "public/assets/uploads"
 public_folder: "/assets/uploads"
 locale: 'es'
 
+# Habilitar previsualización local (opcional)
+local_backend: true
+
 collections:
-  # --- BLOG ---
+  # --- COLECCIÓN: BLOG ---
   - name: "blog"
-    label: "📝 Artículos del Blog"
-    folder: "src/content/blog"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: "Título", name: "title", widget: "string"}
-      - {label: "Fecha", name: "date", widget: "datetime"}
-      - {label: "Autor", name: "author", widget: "string", default: "Dr. Atom Inoe"}
-      - {label: "Imagen Principal", name: "thumbnail", widget: "image"}
-      - {label: "Extracto", name: "excerpt", widget: "text"}
-      - {label: "Cuerpo", name: "body", widget: "markdown"}
+    label: "📝 Blog"
+    files:
+      - name: "posts"
+        label: "Artículos del Blog"
+        file: "src/data/blog_db.json"
+        description: "Gestiona las entradas del blog en 3 idiomas"
+        fields:
+          - {label: "Entradas", name: "posts", widget: "list", fields: [
+              {label: "ID Único (sin espacios)", name: "id", widget: "string"},
+              {label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false},
+              {label: "Autor", name: "author", widget: "string", default: "Dr. Atom Inoe"},
+              {label: "Categoría", name: "category", widget: "select", options: ["Salud", "Energía", "Filosofía", "Nutrición", "Ecología"]},
+              {label: "Imagen Principal", name: "image", widget: "image"},
+              
+              # ESPAÑOL
+              {label: "--- ESPAÑOL ---", name: "sep_es", widget: "hidden"},
+              {label: "Título (ES)", name: "title_es", widget: "string"},
+              {label: "Resumen Corto (ES)", name: "excerpt_es", widget: "text"},
+              {label: "Contenido Completo (ES)", name: "content_es", widget: "markdown"},
 
-  # --- CALENDARIO (EVENTOS) ---
-  - name: "events"
-    label: "📅 Calendario y Eventos"
-    folder: "src/content/events"
-    create: true
-    fields:
-      - {label: "Nombre del Evento", name: "title", widget: "string"}
-      - {label: "Fecha del Evento", name: "date", widget: "datetime"}
-      - {label: "Ubicación", name: "location", widget: "select", options: ["Finca Anolaima", "Bogotá", "Virtual"]}
-      - {label: "Estado", name: "status", widget: "select", options: ["Disponible", "Pocos Cupos", "Lleno"]}
-      - {label: "Descripción", name: "description", widget: "text"}
+              # INGLÉS
+              {label: "--- INGLÉS ---", name: "sep_en", widget: "hidden"},
+              {label: "Title (EN)", name: "title_en", widget: "string", required: false},
+              {label: "Excerpt (EN)", name: "excerpt_en", widget: "text", required: false},
+              {label: "Content (EN)", name: "content_en", widget: "markdown", required: false},
 
-  # --- TIENDA ---
-  - name: "products"
-    label: "🛍️ Productos"
-    folder: "src/content/products"
-    create: true
-    fields:
-      - {label: "Nombre", name: "title", widget: "string"}
-      - {label: "Precio", name: "price", widget: "number"}
-      - {label: "Imagen", name: "image", widget: "image"}
-      - {label: "Descripción", name: "body", widget: "markdown"}
+              # JAPONÉS
+              {label: "--- JAPONÉS ---", name: "sep_ja", widget: "hidden"},
+              {label: "Title (JA)", name: "title_ja", widget: "string", required: false},
+              {label: "Excerpt (JA)", name: "excerpt_ja", widget: "text", required: false},
+              {label: "Content (JA)", name: "content_ja", widget: "markdown", required: false}
+            ]}
+
+  # --- COLECCIÓN: TIENDA ---
+  - name: "shop"
+    label: "🛍️ Tienda"
+    files:
+      - name: "products"
+        label: "Productos"
+        file: "src/data/shop_db.json"
+        fields:
+          - {label: "Lista de Productos", name: "products", widget: "list", fields: [
+              {label: "ID (ej: manual-1)", name: "id", widget: "string"},
+              {label: "Imagen", name: "image", widget: "image"},
+              {label: "Precio (COP)", name: "price", widget: "number"},
+              {label: "Link Mercado Pago", name: "link", widget: "string"},
+              
+              {label: "Nombre (ES)", name: "title_es", widget: "string"},
+              {label: "Descripción (ES)", name: "desc_es", widget: "text"},
+              
+              {label: "Name (EN)", name: "title_en", widget: "string", required: false},
+              {label: "Description (EN)", name: "desc_en", widget: "text", required: false},
+              
+              {label: "Name (JA)", name: "title_ja", widget: "string", required: false},
+              {label: "Description (JA)", name: "desc_ja", widget: "text", required: false}
+            ]}
+
+  # --- COLECCIÓN: CALENDARIO ---
+  - name: "calendar"
+    label: "📅 Calendario"
+    files:
+      - name: "events"
+        label: "Eventos"
+        file: "src/data/calendar_db.json"
+        fields:
+          - {label: "Lista de Eventos", name: "events", widget: "list", fields: [
+              {label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false},
+              {label: "Tipo", name: "type", widget: "select", options: ["taller", "retiro", "charla"]},
+              {label: "Título (ES)", name: "title_es", widget: "string"},
+              {label: "Title (EN)", name: "title_en", widget: "string", required: false},
+              {label: "Title (JA)", name: "title_ja", widget: "string", required: false}
+            ]}
