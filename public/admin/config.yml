@@ -2,78 +2,84 @@
   name: git-gateway
   branch: main
 
-# ESTO ES LA CLAVE: Permite editar desde tu PC sin servidores externos
 local_backend: true
+logo_url: /BIOSALUD-LOGO-DARK.svg
+locale: 'es'
+
+# ESTO ACTIVA EL SISTEMA DE BORRADORES (PENDIENTES)
+publish_mode: editorial_workflow
 
 media_folder: "public/assets/uploads"
 public_folder: "/assets/uploads"
-locale: 'es'
 
 collections:
-  # --- BLOG ---
+  # --- 1. CONFIGURACIÓN DEL HOME (TU DASHBOARD MANUAL) ---
+  - name: "settings"
+    label: "🏠 Gestión del Home"
+    files:
+      - name: "home_highlights"
+        label: "Destacados y Estadísticas Visibles"
+        file: "src/data/home_settings.json"
+        fields:
+          - {label: "Artículo Destacado del Mes", name: "featured_post", widget: "relation", collection: "blog", search_fields: ["title_es"], value_field: "id", display_fields: ["title_es"]}
+          - {label: "Producto Más Vendido (Visible)", name: "best_seller", widget: "relation", collection: "shop", search_fields: ["title_es"], value_field: "id", display_fields: ["title_es"]}
+          - {label: "Mensaje de Barra Superior (Avisos)", name: "top_banner", widget: "string", required: false}
+
+  # --- 2. BLOG (EDITOR TIPO WORDPRESS) ---
   - name: "blog"
     label: "📝 Blog"
-    files:
-      - name: "posts"
-        label: "Artículos del Blog"
-        file: "src/data/blog_db.json"
-        fields:
-          - {label: "Entradas", name: "posts", widget: "list", fields: [
-              {label: "ID Único (ej: post-1)", name: "id", widget: "string"},
-              {label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false},
-              {label: "Autor", name: "author", widget: "string", default: "Dr. Atom Inoe"},
-              {label: "Categoría", name: "category", widget: "select", options: ["Salud", "Energía", "Filosofía", "Nutrición", "Ecología"]},
-              {label: "Imagen", name: "image", widget: "image"},
-              
-              {label: "--- ESPAÑOL ---", name: "sep_es", widget: "hidden"},
-              {label: "Título (ES)", name: "title_es", widget: "string"},
-              {label: "Resumen (ES)", name: "excerpt_es", widget: "text"},
-              {label: "Contenido (ES)", name: "content_es", widget: "markdown"},
+    folder: "src/data/posts" # CAMBIO: Guardaremos cada post en su propio archivo para mejor gestión
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Título (Español)", name: "title", widget: "string"}
+      - {label: "Imagen Principal", name: "image", widget: "image"}
+      - {label: "Fecha de Publicación", name: "date", widget: "datetime"}
+      - {label: "Autor", name: "author", widget: "string", default: "Dr. Atom Inoe"}
+      
+      # SISTEMA DE TAGS
+      - {label: "Categoría / Tags", name: "tags", widget: "select", multiple: true, options: ["Salud", "Urosalud", "Nutrición", "Filosofía", "Ecología", "Terapia", "Testimonios"]}
+      
+      # EDITOR DE TEXTO RICO (EL "WORDPRESS")
+      - {label: "Resumen Corto", name: "excerpt", widget: "text"}
+      - {label: "Cuerpo del Artículo", name: "body", widget: "markdown"} 
 
-              {label: "--- INGLÉS ---", name: "sep_en", widget: "hidden"},
-              {label: "Title (EN)", name: "title_en", widget: "string", required: false},
-              {label: "Excerpt (EN)", name: "excerpt_en", widget: "text", required: false},
-              {label: "Content (EN)", name: "content_en", widget: "markdown", required: false},
+      # IDIOMAS ADICIONALES (Opcionales en pestañas)
+      - {label: "🇬🇧 Título Inglés", name: "title_en", widget: "string", required: false}
+      - {label: "🇬🇧 Contenido Inglés", name: "body_en", widget: "markdown", required: false}
+      
+      - {label: "🇯🇵 Título Japonés", name: "title_ja", widget: "string", required: false}
+      - {label: "🇯🇵 Contenido Japonés", name: "body_ja", widget: "markdown", required: false}
 
-              {label: "--- JAPONÉS ---", name: "sep_ja", widget: "hidden"},
-              {label: "Title (JA)", name: "title_ja", widget: "string", required: false},
-              {label: "Excerpt (JA)", name: "excerpt_ja", widget: "text", required: false},
-              {label: "Content (JA)", name: "content_ja", widget: "markdown", required: false}
-            ]}
-
-  # --- TIENDA ---
+  # --- 3. TIENDA ---
   - name: "shop"
     label: "🛍️ Tienda"
     files:
       - name: "products"
-        label: "Productos"
+        label: "Catálogo de Productos"
         file: "src/data/shop_db.json"
         fields:
-          - {label: "Lista de Productos", name: "products", widget: "list", fields: [
-              {label: "ID", name: "id", widget: "string"},
+          - {label: "Productos", name: "products", widget: "list", fields: [
+              {label: "ID Único", name: "id", widget: "string"},
+              {label: "Nombre del Producto", name: "title_es", widget: "string"},
               {label: "Imagen", name: "image", widget: "image"},
               {label: "Precio (COP)", name: "price", widget: "number"},
-              {label: "Link Mercado Pago", name: "link", widget: "string"},
-              {label: "Nombre (ES)", name: "title_es", widget: "string"},
-              {label: "Descripción (ES)", name: "desc_es", widget: "text"},
-              {label: "Name (EN)", name: "title_en", widget: "string", required: false},
-              {label: "Description (EN)", name: "desc_en", widget: "text", required: false},
-              {label: "Name (JA)", name: "title_ja", widget: "string", required: false},
-              {label: "Description (JA)", name: "desc_ja", widget: "text", required: false}
+              {label: "Link de Mercado Pago", name: "link", widget: "string", hint: "Pega aquí el link que generaste en Mercado Pago"},
+              {label: "Descripción Corta", name: "desc_es", widget: "text"},
+              {label: "🇬🇧 Nombre EN", name: "title_en", widget: "string", required: false},
+              {label: "🇯🇵 Nombre JP", name: "title_ja", widget: "string", required: false}
             ]}
 
-  # --- CALENDARIO ---
+  # --- 4. CALENDARIO ---
   - name: "calendar"
     label: "📅 Calendario"
     files:
       - name: "events"
-        label: "Eventos"
+        label: "Eventos del Mes"
         file: "src/data/calendar_db.json"
         fields:
-          - {label: "Lista de Eventos", name: "events", widget: "list", fields: [
-              {label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false},
-              {label: "Tipo", name: "type", widget: "select", options: ["taller", "retiro", "charla"]},
-              {label: "Título (ES)", name: "title_es", widget: "string"},
-              {label: "Title (EN)", name: "title_en", widget: "string", required: false},
-              {label: "Title (JA)", name: "title_ja", widget: "string", required: false}
+          - {label: "Eventos", name: "events", widget: "list", fields: [
+              {label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DD", time_format: false},
+              {label: "Título del Evento", name: "title_es", widget: "string"},
+              {label: "Tipo", name: "type", widget: "select", options: ["taller", "retiro", "charla"]}
             ]}

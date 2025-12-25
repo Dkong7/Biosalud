@@ -8,8 +8,9 @@ import { ProgramDetail } from './pages/Program/ProgramDetail';
 import { Calendar } from './pages/Calendar/Calendar';
 import { Shop } from './pages/Shop/Shop';
 import { Blog } from './pages/Blog/Blog';
-import { BlogPost } from './pages/Blog/BlogPost'; // NUEVO IMPORT
+import { BlogPost } from './pages/Blog/BlogPost';
 import { Contact } from './pages/Contact/Contact';
+import { AdminRedirect } from './pages/AdminRedirect';
 
 function App() {
   return (
@@ -25,8 +26,10 @@ function App() {
             <Route path="/calendar" element={<Calendar />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:id" element={<BlogPost />} /> {/* RUTA DINÁMICA BLOG */}
+            <Route path="/blog/:id" element={<BlogPost />} />
             <Route path="/contact" element={<Contact />} />
+            {/* RUTA MÁGICA: Captura /admin y redirige */}
+            <Route path="/admin" element={<AdminRedirect />} />
           </Routes>
         </main>
         <Footer />
